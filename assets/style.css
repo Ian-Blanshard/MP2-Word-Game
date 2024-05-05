@@ -1,0 +1,26 @@
+
+.gameTitle {
+    height: 20vh;
+    background-color: grey;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40vh;
+    height: 40vh;
+    margin: auto;
+}
+
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 80px;
+    background-color: grey;
+    margin-left: 20px;
+    margin-top: 20px;
+}
