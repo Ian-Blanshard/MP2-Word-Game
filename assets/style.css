@@ -15,7 +15,7 @@
     display: flex;
 }
 
-.result {
+#result {
     background-color: lightgray;
     text-align: center;
 }

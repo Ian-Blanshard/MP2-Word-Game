@@ -1,3 +1,7 @@
+//array to hold letters;
+let playersWord = [];
+
+
 
 //function to start new game
 function startNewGame() {
@@ -9,8 +13,22 @@ function startNewGame() {
 
 
 //event listener for start game button
-let startButton = document.getElementById('startGame');
+const startButton = document.getElementById('startGame');
     startButton.addEventListener('click', startNewGame);
+
+//event listener for each tile 
+const tiles = document.querySelectorAll('.tile');
+tiles.forEach(tile => {
+    tile.addEventListener('click',addToWord)
+});
+
+
+//function to add letter to player word 
+function addToWord() {
+    playersWord.push(this.innerHTML);
+    console.log(playersWord);
+
+}
 
 //countdown function for players time to complete game 
 function countdown() {
