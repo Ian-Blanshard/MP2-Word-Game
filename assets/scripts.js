@@ -5,6 +5,8 @@ let playersWord = [];
 
 //function to start new game
 function startNewGame() {
+    //reset the playersWord array
+    playersWord = [];
     //start the countdown
     setTimeout(countdown, 1000);
     //add letters to the tiles
@@ -19,16 +21,31 @@ const startButton = document.getElementById('startGame');
 //event listener for each tile 
 const tiles = document.querySelectorAll('.tile');
 tiles.forEach(tile => {
-    tile.addEventListener('click',addToWord)
+    tile.addEventListener('click',playerGameTileClick)
 });
 
-
-//function to add letter to player word 
-function addToWord() {
+function playerGameTileClick() {
+    //add the letter from the clicked tile to the playersWord array
     playersWord.push(this.innerHTML);
+    
     console.log(playersWord);
 
+    updateAnswerTiles();
 }
+
+
+
+
+
+function updateAnswerTiles() {
+    let playersWordDiv = document.getElementById('playersWord');
+    playersWordDiv.innerHTML = '';
+    for (let word of playersWord) {
+    playersWordDiv.innerHTML += `<div class='tile'>${word}</div>`;
+    };
+};
+
+
 
 //countdown function for players time to complete game 
 function countdown() {
@@ -75,7 +92,7 @@ function addLettersToTiles() {
     //use generate letters function to create a variable containing 12 letters
     let letters = generateLetters();
     //use a loop to change the inner html of each tile to the letter
-    // a variale to use as a counter
+    // a variable to use as a counter
     let i = 0;
     //for loop looping through all the tiles
     for (let tile of tiles) {
