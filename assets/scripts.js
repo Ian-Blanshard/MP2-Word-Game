@@ -3,10 +3,14 @@ let playersWord = [];
 
 
 
-//function to start new game
+//function to start new game/ main game loop
 function startNewGame() {
     //reset the playersWord array
     playersWord = [];
+    //reset answer tiles
+    resetPlayerAnswer();
+    //reset the timer to 30
+    
     //start the countdown
     setTimeout(countdown, 1000);
     //add letters to the tiles
@@ -24,6 +28,17 @@ tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
 
+
+
+//function to remove player answer tiles 
+function resetPlayerAnswer() {
+    let playersWordDiv = document.getElementById('playersWord');
+    let answerTiles = playersWordDiv.getElementsByClassName('tile');
+    while (answerTiles.length > 0) {
+        playersWordDiv.removeChild(answerTiles[0]);
+    }
+};
+//function to respond when the player clicks on of the game tiles
 function playerGameTileClick() {
     //add the letter from the clicked tile to the playersWord array
     playersWord.push(this.innerHTML);
@@ -32,11 +47,7 @@ function playerGameTileClick() {
 
     updateAnswerTiles();
 }
-
-
-
-
-
+//function to add player selected letters to tiles in the result area of the page
 function updateAnswerTiles() {
     let playersWordDiv = document.getElementById('playersWord');
     playersWordDiv.innerHTML = '';
@@ -44,9 +55,6 @@ function updateAnswerTiles() {
     playersWordDiv.innerHTML += `<div class='tile'>${word}</div>`;
     };
 };
-
-
-
 //countdown function for players time to complete game 
 function countdown() {
     //assign span to hold timer to timer variable
@@ -63,7 +71,6 @@ function countdown() {
         setTimeout(countdown, 1000);
     };
 };
-
 //function to generate 12 random letters
 function generateLetters() {
     //an array holding consonants
@@ -84,11 +91,10 @@ function generateLetters() {
     }
     return letters;
 };
-
 //function to add the generated letters to the tiles on the page
 function addLettersToTiles() {
     //assign tile elements to a variable
-    let tiles = document.getElementsByClassName('tile');7
+    let tiles = document.getElementsByClassName('tile');
     //use generate letters function to create a variable containing 12 letters
     let letters = generateLetters();
     //use a loop to change the inner html of each tile to the letter
