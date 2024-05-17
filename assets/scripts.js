@@ -9,10 +9,8 @@ function startNewGame() {
     playersWord = [];
     //reset answer tiles
     resetPlayerAnswer();
-    //reset the timer to 30
-    
-    //start the countdown
-    setTimeout(countdown, 1000);
+    //start game timer
+    startNewGameTimer();
     //add letters to the tiles
     addLettersToTiles();
 };
@@ -55,22 +53,33 @@ function updateAnswerTiles() {
     playersWordDiv.innerHTML += `<div class='tile'>${word}</div>`;
     };
 };
-//countdown function for players time to complete game 
-function countdown() {
-    //assign span to hold timer to timer variable
-    let timer = document.getElementById('countdownTimer')
-    //assign variable seconds to the inner text content of countdowntimer span
-    let seconds = parseInt(timer.innerText);
-    //start countdown if not already at 0
-    if (seconds > 0) {
-        //decrease seconds by 1
-        seconds--;
-        //assign new value of seconds to span
-        timer.innerText = seconds;
-        //call the countdown function again after 1 second
-        setTimeout(countdown, 1000);
-    };
-};
+
+//variable to hold interval timer, outside function to allow it to be reset
+//at start of function
+let countSecond;
+//function to start new game timer
+function startNewGameTimer() {
+    //assign the span to hold the timer to the variable timerDisplaySpan
+    let timerDisplaySpan = document.getElementById('countDownTimer');
+    //clear any existing timers
+    clearInterval(countSecond);
+    //reset timer variable 
+    let timerSeconds = 30;
+    //set timer display to timerSeconds
+    timerDisplaySpan.textContent = timerSeconds;
+    //use setInterval timer running a function to -1 from timerSeconds every sec
+    countSecond = setInterval(() => {
+        //minus 1 from timerSeconds
+        timerSeconds--;
+        //update timer span
+        timerDisplaySpan.textContent = timerSeconds;
+        //respond once timer reaches 0
+        if (timerSeconds <= 0) {
+            //action when timer reaches 0
+            alert('times up')
+        }
+    }, 1000);
+}
 //function to generate 12 random letters
 function generateLetters() {
     //an array holding consonants
