@@ -1,6 +1,8 @@
 //array to hold letters;
 let playersWord = [];
-
+//variable to hold interval timer, outside function to allow it to be reset
+//at start of function
+let countSecond;
 
 
 //function to start new game/ main game loop
@@ -20,12 +22,18 @@ function startNewGame() {
 const startButton = document.getElementById('startGame');
     startButton.addEventListener('click', startNewGame);
 
-//event listener for each tile 
+//event listner for submit button
+const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click',checkButton);
+
+    function checkButton(){
+        console.log('clicked submit')
+    }
+//event listener for each tile which runs the playerGameTileClick function when clicked
 const tiles = document.querySelectorAll('.tile');
 tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
-
 
 
 //function to remove player answer tiles 
@@ -40,9 +48,9 @@ function resetPlayerAnswer() {
 function playerGameTileClick() {
     //add the letter from the clicked tile to the playersWord array
     playersWord.push(this.innerHTML);
-    
+    //log to console !!!!! remove in final build !!!!!
     console.log(playersWord);
-
+    //create tiles for all current letters in playersWord array
     updateAnswerTiles();
 }
 //function to add player selected letters to tiles in the result area of the page
@@ -53,10 +61,6 @@ function updateAnswerTiles() {
     playersWordDiv.innerHTML += `<div class='tile'>${word}</div>`;
     };
 };
-
-//variable to hold interval timer, outside function to allow it to be reset
-//at start of function
-let countSecond;
 //function to start new game timer
 function startNewGameTimer() {
     //assign the span to hold the timer to the variable timerDisplaySpan
@@ -76,7 +80,7 @@ function startNewGameTimer() {
         //respond once timer reaches 0
         if (timerSeconds <= 0) {
             //action when timer reaches 0
-            alert('times up')
+            clearInterval(countSecond);
         }
     }, 1000);
 }
@@ -117,8 +121,3 @@ function addLettersToTiles() {
         i++;
     };
 };
-
-
-
-
- 
