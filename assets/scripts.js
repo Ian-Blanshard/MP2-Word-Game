@@ -24,11 +24,8 @@ const startButton = document.getElementById('startGame');
 
 //event listner for submit button
 const submitButton = document.getElementById('submitButton');
-    submitButton.addEventListener('click',checkButton);
+    submitButton.addEventListener('click',PlayerSubmitAnswer);
 
-    function checkButton(){
-        console.log('clicked submit')
-    }
 //event listener for each tile which runs the playerGameTileClick function when clicked
 const tiles = document.querySelectorAll('.tile');
 tiles.forEach(tile => {
@@ -53,6 +50,18 @@ function playerGameTileClick() {
     //create tiles for all current letters in playersWord array
     updateAnswerTiles();
 }
+//function to return string containing players answer, when the submit button is clicked
+function PlayerSubmitAnswer() {
+    //join the playersWord answer array into a single string
+    let wordToCheck = playersWord.join('');
+    //log to console !!!!! remove in final build !!!!!
+    console.log(wordToCheck);
+    //cancel the timer
+    clearInterval(countSecond);
+    //return the string
+    return wordToCheck;
+}
+
 //function to add player selected letters to tiles in the result area of the page
 function updateAnswerTiles() {
     let playersWordDiv = document.getElementById('playersWord');
