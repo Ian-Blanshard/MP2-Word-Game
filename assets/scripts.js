@@ -1,9 +1,12 @@
 //global variables
 //array to hold letters;
 let playersWord = [];
-//variable to hold interval timer, outside function to allow it to be reset
-//at start of function
+//variable to hold interval timer
 let countSecond;
+//variable to hold timerseconds
+let timerSeconds;
+//variable to hold the playerScore
+let playerScore;
 
 
 //function to start new game/ main game loop
@@ -78,14 +81,15 @@ function PlayerSubmitAnswer() {
     console.log(wordToCheck);
     //cancel the timer
     clearInterval(countSecond);
+    //calculate the player score
+    calculatePlayerScore();
     //run the function which interacts with API, passing the callback
     //and the wordToCheck
     getDataFromApi(correctWordEntered, wordToCheck);
 }
 //function to alert user that their answer was found in the dictionary
 function correctWordEntered(data) {
-    alert(`The word you entered was ${data[0].word}.`)
-};
+    alert(`The word you entered was ${data[0].word}. This scored ${playerScore} `)};
 //functon to alert user that their answer was not found in the dictionary
 function notAWord() {
  alert(`The word you entered does not score as it does not exist in the english dictionary`)
@@ -105,7 +109,7 @@ function startNewGameTimer() {
     //clear any existing timers
     clearInterval(countSecond);
     //reset timer variable 
-    let timerSeconds = 30;
+    timerSeconds = 30;
     //set timer display to timerSeconds
     timerDisplaySpan.textContent = timerSeconds;
     //use setInterval timer running a function to -1 from timerSeconds every sec
@@ -158,3 +162,10 @@ function addLettersToTiles() {
         i++;
     };
 };
+//function to calculate player score for the word they entered
+function calculatePlayerScore() {
+    //multiply the length of the word by the remaining seconds
+    playerScore = playersWord.length * timerSeconds;
+    //log to console !!!!! remove in final build !!!!!
+    console.log(playerScore);
+}
