@@ -1,3 +1,4 @@
+//global variables
 //array to hold letters;
 let playersWord = [];
 //variable to hold interval timer, outside function to allow it to be reset
@@ -17,12 +18,11 @@ function startNewGame() {
     addLettersToTiles();
 };
 
-
 //event listener for start game button
 const startButton = document.getElementById('startGame');
     startButton.addEventListener('click', startNewGame);
 
-//event listner for submit button
+//event listener for submit button
 const submitButton = document.getElementById('submitButton');
     submitButton.addEventListener('click',PlayerSubmitAnswer);
 
@@ -32,7 +32,27 @@ tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
 
-
+//function which interacts with the dictionary API, allowing the program to check
+//whether the player answer is a word in the english dictionary  
+function getDataFromApi(callback, wordToCheck){
+    //create new instance of XMLHttp request and assign it to a variable 
+    var xhr = new XMLHttpRequest(); 
+    //initialise the request, using wordToCheck variable which is entered by a user
+    xhr.open('GET', `https://api.dictionaryapi.dev/api/v2/entries/en/${wordToCheck}`);
+    //send the request to the server
+    xhr.send();
+    //an event handler to take action when the server returns the request
+    xhr.onreadystatechange = function() {
+        //if the request has been completed (4) and has been successful (200)
+        if (this.readyState == 4 && this.status == 200) {
+            //the call back function is called 
+            callback(JSON.parse(this.responseText));
+            //if the status returned is 404 it wasn't located and the notAWord function runs
+        } else if (this.readyState == 4 && this.status == 404){
+            notAWord();
+        }
+    };
+};
 //function to remove player answer tiles 
 function resetPlayerAnswer() {
     let playersWordDiv = document.getElementById('playersWord');
@@ -58,10 +78,18 @@ function PlayerSubmitAnswer() {
     console.log(wordToCheck);
     //cancel the timer
     clearInterval(countSecond);
-    //return the string
-    return wordToCheck;
+    //run the function which interacts with API, passing the callback
+    //and the wordToCheck
+    getDataFromApi(correctWordEntered, wordToCheck);
 }
-
+//function to alert user that their answer was found in the dictionary
+function correctWordEntered(data) {
+    alert(`The word you entered was ${data[0].word}.`)
+};
+//functon to alert user that their answer was not found in the dictionary
+function notAWord() {
+ alert(`The word you entered does not score as it does not exist in the english dictionary`)
+};
 //function to add player selected letters to tiles in the result area of the page
 function updateAnswerTiles() {
     let playersWordDiv = document.getElementById('playersWord');
