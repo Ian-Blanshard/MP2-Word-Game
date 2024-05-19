@@ -31,6 +31,7 @@ const submitButton = document.getElementById('submitButton');
 
 //event listener for each tile which runs the playerGameTileClick function when clicked
 const tiles = document.querySelectorAll('.tile');
+//use forEach to loop through all tiles and apply eventlisteners to all of them
 tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
@@ -89,7 +90,10 @@ function PlayerSubmitAnswer() {
 }
 //function to alert user that their answer was found in the dictionary
 function correctWordEntered(data) {
-    alert(`The word you entered was ${data[0].word}. This scored ${playerScore} `)};
+    alert(`The word you entered was ${data[0].word}. This scored ${playerScore} `)
+//update high score if correct word was entered
+updateHighscore();
+};  
 //functon to alert user that their answer was not found in the dictionary
 function notAWord() {
  alert(`The word you entered does not score as it does not exist in the english dictionary`)
@@ -168,4 +172,16 @@ function calculatePlayerScore() {
     playerScore = playersWord.length * timerSeconds;
     //log to console !!!!! remove in final build !!!!!
     console.log(playerScore);
-}
+};
+//function to update highscore if new player score is highest yet
+function updateHighscore() {
+    //assign the span to place the score in to highScoreDiv
+    const highScoreDiv = document.getElementById('highScore');
+    //assign the current highscore to highScore
+    let highScore = parseInt(highScoreDiv.innerText);
+    //
+    if (playerScore > highScore) {
+        highScore = playerScore;
+        highScoreDiv.innerText = playerScore;
+    };
+};
