@@ -38,28 +38,33 @@ Live version of site hosted on GitPages [here]()
 
 ## User Experience (UX) <a name="UX"></a>
 ### Project Goals <a name="project-goals"></a>
+
+The goal of this project is to create a word game, a short puzzle based game which is fun to plate and can be used to improve English language skills, expand your vocabulary and improve your literacy skills. 
+
 ### User stories <a name="user-stories"></a>
 
 Users of this site may be:
 
-1 
+1 A child who is looking for a fun way to improve their English language skills, they want:
 
-  * 
-  * 
-  * 
-  * 
+  * A game which is simple, accessible and intuitive to play 
+  * Colours which make the game attractive to play
+  * The challenge of beating previous attempts
+  * To be able to learn new words
 
-2 
+2 An adult who enjoys traditional game such as scrabble and would like to practice their skills, they want:
  
-  * 
-  * 
-  * 
+  * A challenging game to help them improve existing language skills
+  * A engaging experience which they can learn more about the words they create
+  * A way of measuring if they are improving
 
 
 ### Wireframes <a name="wireframes"></a>
 I used [figma](www.figma.com) to create wireframes for my project to get some of the ideas for layouts designed prior to starting to code them.
 
-![Screenshot of wireframes]()
+![Screenshot of wireframes](/assets/wireframe-1.jpg)
+
+![Screenshot of wireframes](/assets/wireframe-2.jpg)
 
 ### Colour Scheme and Font <a name="styles"></a>
 
