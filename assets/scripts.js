@@ -36,6 +36,25 @@ tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
 
+//event listener for showing modal when page first loads
+document.addEventListener('DOMContentLoaded', function() {
+    //assign the gameInstructions div to modalClass variable 
+    const modalClass = document.getElementById('gameInstructions');
+    //add the is-visible CSS rules to make the modal visible
+    modalClass.classList.add('is-visible');
+    //event listener for the close button on modal 
+    //assign close button to variable closeModalButton
+    const closeModalButton = modalClass.querySelector('[data-close]');
+    closeModalButton.addEventListener('click', function() {
+        modalClass.classList.remove('is-visible');
+    });
+});
+
+
+
+
+
+
 //function which interacts with the dictionary API, allowing the program to check
 //whether the player answer is a word in the english dictionary  
 function getDataFromApi(callback, wordToCheck){

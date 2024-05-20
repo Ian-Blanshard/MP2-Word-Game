@@ -48,3 +48,26 @@
 ul {
     list-style: none;
 }
+
+/* modal styles */
+
+.modal {
+    position: fixed;
+    top: 2%;
+    left: 2%;
+    bottom: 2%;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--black);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+}
