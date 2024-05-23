@@ -137,7 +137,20 @@ function showCorrectWordModal(data) {
 
 //functon to alert user that their answer was not found in the dictionary
 function notAWord() {
- alert(`The word you entered does not score as it does not exist in the english dictionary`)
+    //assign the div for holding the result text to a variable
+    const correctWordModalDiv =  document.getElementById('notAWordResult');
+    //enter the result text into the div
+    correctWordModalDiv.innerText = `The word you entered does not score as it does not exist in the english dictionary`;
+    //assign the gameInstructions div to modalClass variable 
+    const modalClass = document.getElementById('notAWord');
+    //add the is-visible CSS rules to make the modal visible
+    modalClass.classList.add('is-visible');
+    //event listener for the close button on modal 
+    //assign close button to variable closeModalButton
+    const closeModalButton = modalClass.querySelector('[data-close]');
+    closeModalButton.addEventListener('click', function() {
+        modalClass.classList.remove('is-visible');
+    });   
 };
 //function to add player selected letters to tiles in the result area of the page
 function updateAnswerTiles() {
