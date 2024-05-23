@@ -109,10 +109,32 @@ function PlayerSubmitAnswer() {
 }
 //function to alert user that their answer was found in the dictionary
 function correctWordEntered(data) {
-    alert(`The word you entered was ${data[0].word}. This scored ${playerScore} `)
-//update high score if correct word was entered
-updateHighscore();
-};  
+    //show the 
+    showCorrectWordModal(data);
+    //update high score if correct word was entered
+    updateHighscore();
+    }; 
+
+function showCorrectWordModal(data) {
+        //assign the div for holding the result text to a variable
+        const correctWordModalDiv =  document.getElementById('isAWordResult');
+        //enter the resutl text into the div
+        correctWordModalDiv.innerText = `The word you entered was ${data[0].word}. This scored ${playerScore}`;
+        //assign the gameInstructions div to modalClass variable 
+        const modalClass = document.getElementById('isAWord');
+        //add the is-visible CSS rules to make the modal visible
+        modalClass.classList.add('is-visible');
+        //event listener for the close button on modal 
+        //assign close button to variable closeModalButton
+        const closeModalButton = modalClass.querySelector('[data-close]');
+        closeModalButton.addEventListener('click', function() {
+            modalClass.classList.remove('is-visible');
+        });       
+};
+
+
+
+
 //functon to alert user that their answer was not found in the dictionary
 function notAWord() {
  alert(`The word you entered does not score as it does not exist in the english dictionary`)

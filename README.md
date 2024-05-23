@@ -87,6 +87,9 @@ This Project uses the following languages:
 for learning about setInterval() and setTimeout() in creating the timer element
 https://www.elated.com/javascript-timers-with-settimeout-and-setinterval/
 
+for learning to create modal 
+https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t
+
 ## Testing  <a name="testing"></a>
 s
 ### Bugs <a name="bugs"></a>

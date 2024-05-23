@@ -53,15 +53,18 @@ ul {
 
 .modal {
     position: fixed;
-    top: 2%;
-    left: 2%;
-    bottom: 2%;
-    right: 2%;
+    color: black;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    background: var(--black);
+    background: grey;
+    border-color: black;
+    border-radius: 20px;
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
