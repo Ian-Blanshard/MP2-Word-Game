@@ -50,11 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-
-
-
-
 //function which interacts with the dictionary API, allowing the program to check
 //whether the player answer is a word in the english dictionary  
 function getDataFromApi(callback, wordToCheck){
@@ -120,7 +115,7 @@ function showCorrectWordModal(data) {
         const correctWordModalDiv =  document.getElementById('isAWordResult');
         //enter the resutl text into the div
         correctWordModalDiv.innerText = `The word you entered was ${data[0].word}. This scored ${playerScore}`;
-        //assign the gameInstructions div to modalClass variable 
+        //assign the isAWord div to modalClass variable 
         const modalClass = document.getElementById('isAWord');
         //add the is-visible CSS rules to make the modal visible
         modalClass.classList.add('is-visible');
@@ -132,16 +127,13 @@ function showCorrectWordModal(data) {
         });       
 };
 
-
-
-
 //functon to alert user that their answer was not found in the dictionary
 function notAWord() {
     //assign the div for holding the result text to a variable
     const correctWordModalDiv =  document.getElementById('notAWordResult');
     //enter the result text into the div
     correctWordModalDiv.innerText = `The word you entered does not score as it does not exist in the english dictionary`;
-    //assign the gameInstructions div to modalClass variable 
+    //assign the notAWord div to modalClass variable 
     const modalClass = document.getElementById('notAWord');
     //add the is-visible CSS rules to make the modal visible
     modalClass.classList.add('is-visible');

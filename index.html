@@ -33,54 +33,42 @@
         </div>
     </div>
     
-    
-    <div class="gameTitle">
-        <h1>Game Title</h1>
-        <div>
+    <div id="game">
+        <div class="gameTitle">
+            <h1>Game Title</h1>
             <h2>High Score: <span id="highScore">0</span></h2>
+            <h2>Timer countdown: <span id="countDownTimer"></span> seconds</h2>
         </div>
-    </div>
-    <div class="currentGame">
-        <div class="container">
+        <div class="currentGame">
+            
+            <div class="container">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+            
+        </div>
+        <div id="result">
             <h2>
-                Timer countdown: <span id="countDownTimer"></span> seconds
+                result
             </h2>
+            <div id="playersWord">   
+            </div>
         </div>
-        <div class="container">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-        </div>
-        <div id="submitButton" class="container">
-            <h2>
+        <div class="gameButtons">
+            <h1 id="startGame">Start Game</h1>   
+            <h2 id="submitButton">
                 Submit Word
-            </h2>
-        </div>
-    </div>
-    <div id="result">
-        <h2>
-            result
-        </h2>
-        <div id="playersWord" class="container">   
-        </div>
-    </div>
-    <div class="gameInstructions">
-        <h1 id="startGame">Start Game</h1>
-        <div>
-            <ul>
-                <li>- Click start game</li>
-                <li>- Use the letters provided to spell a word</li>
-                <li>- Click Submit</li>
-            </ul>
+            </h2>     
         </div>
     </div>
 </body>

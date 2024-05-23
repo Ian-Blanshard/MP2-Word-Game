@@ -1,25 +1,30 @@
+body {
+    background-color: blue;
+}
+
+#game {
+    height: 100vh;
+}
 
 .gameTitle {
-    height: 20vh;
+    
     background-color: gray;
     text-align: center;
 }
 
-.gameInstructions {
+.gameButtons {
     text-align: center;
-    height: 20vh;
     background-color: gray;
 }
 
 .currentGame {
-    display: flex;
+    display: inline;
 }
 
 #result {
     background-color: lightgray;
     text-align: center;
 }
-
 
 .container {
     display: flex;
@@ -30,16 +35,16 @@
     background-color: lightgray;
 }
 
-.container#playersWord {
-    width: 100vh;
+#playersWord {
+    display: flex;
 }
 
 .tile {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 80px;
+    width: 40px;
+    height: 60px;
     background-color: grey;
     margin: 10px;
     font-size: 50px;
