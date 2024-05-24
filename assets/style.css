@@ -3,7 +3,7 @@
 
 
 body {
-    background-color: rgb(252, 252, 252);
+    background-color: gray;
     margin: 0;
     font-family: "Radio Canada Big", sans-serif;
 }
@@ -11,16 +11,13 @@ body {
 #game {
     height: 100vh;
 }
-
-
 /*--------------------------- game header styles ----------------------------- */
-
 /* div holding title, highscore and timer */
 #gameTitle {
-    background-color: rgb(252, 252, 252);
+    background-color: lightgray;
     text-align: center;
     border: 5px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 /* game title */
 #gameTitle h1 {
@@ -30,11 +27,7 @@ body {
 #gameTitle h2 {
     font-weight: 200;
 }
-
-
 /*------------------ letter container and letter tile styles------------------ */
-
-
 /* container to hold game letter tiles */
 #container {
     padding-top: 10%;
@@ -48,7 +41,7 @@ body {
     width: 80%;
     background-color: lightgray;
     border: 5px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 /* tiles to container letters */
 .tile {
@@ -63,10 +56,7 @@ body {
     border-radius: 5px;
     text-transform: capitalize;
 }
-
-
 /*---------------------- players answer tiles styles -------------------------- */
-
 /* div which contains results */
 #result {
     margin: 5px auto;
@@ -76,58 +66,57 @@ body {
     height: 15%;
     background-color: lightgray;
     border: 5px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 /* title for players word */
 #result h2 {
     margin: 0;
     font-weight: 200;
 }
+/* changes to tile class rules for tiles in player answer */
 #result .tile {
     width: 4.8vh;
     height: 7.2vh;
     font-size: 40px;
     margin: 5px;
 }
-
 /* div to hold player letters of their answer */
 #playersWord {
     display: flex;
     justify-content: center;
 }
-
-
-
-
 /*---------------------- game control buttons styles -------------------------- */
 
-.gameButtons {
+#gameButtons {
     position: fixed;
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: rgb(252, 252, 252);
+    background-color: lightgray;
     z-index: 1;
     border: 5px solid black;
-    border-radius: 15px;
+    border-radius: 10px;
     box-sizing: border-box;
     padding: 5px 40px 0px;
 }
 
+#gameButtons h2 {
+    margin: 2%;
+    background-color: lightgray;
+}
+
 #startGame {
-    border: 5px solid black;
-    border-radius: 15px; 
+    border: 2px solid black;
+    border-radius: 10px; 
     font-weight: 200;
 }
 
 #submitButton {
-    border: 5px solid black;
-    border-radius: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
     margin: 5px;
     font-weight: 200;
 }
-
-
 
 /*------------------------------- modal styles ------------------------------- */
 
