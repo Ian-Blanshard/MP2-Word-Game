@@ -9,9 +9,6 @@
 <body>
     <div class="modal" id="gameInstructions">
         <div class="modalContent">
-            <header class="modalHeader">
-                <button class="closeModal" aria-label="close modal" data-close>X</button>
-            </header>
             <section class="introduction"><h1>Welcome to Word Game</h1>
                 The game where you try to make the longest word you can in 30 seconds,
                 test your 
@@ -21,9 +18,13 @@
                 <ul>click start game</ul>
                 <ul>12 letters will appear on the diplay tiles</ul>
                 <ul>click the letters to make the longest word you can</ul>
+                <ul>your word must be a minimum of 3 letters to count</ul>
                 <ul>you have 30 seconds to complete your word</ul>
                 <ul>when your word is complete click submit word</ul>
                 <ul>See if you can beat your previous score</ul>
+            </section>
+            <section>
+                <button class="closeModal" aria-label="close modal" data-close>I'm ready to play</button>
             </section>
         </div>
     </div>
@@ -48,9 +49,9 @@
         <div id="gameTitle">
             <h1>Game Title</h1>
             <h2>High Score: <span id="highScore">0</span></h2>
-            <h2>Timer countdown: <span id="countDownTimer"></span> seconds</h2>
+            <h2>Game Timer: <span id="countDownTimer">30</span></h2>
         </div>
-        <div class="currentGame">
+        <div>
             
             <div id="container">
                 <div class="tile"></div>
@@ -69,14 +70,12 @@
             
         </div>
         <div id="result">
-            <h2>
-                result
-            </h2>
+            <h2>Your Word</h2>
             <div id="playersWord">   
             </div>
         </div>
         <div class="gameButtons">
-            <h1 id="startGame">Start Game</h1>   
+            <h2 id="startGame">Start Game</h2>   
             <h2 id="submitButton">
                 Submit Word
             </h2>     
