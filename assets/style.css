@@ -1,22 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 body {
-    background-color: blue;
+    background-color: rgb(252, 252, 252);
+    margin: 0;
+    font-family: "Radio Canada Big", sans-serif;
+}
+
+h1 {
+    margin: 0;
 }
 
 #game {
     height: 100vh;
 }
 
-.gameTitle {
-    
-    background-color: gray;
+#gameTitle {
+    background-color: rgb(252, 252, 252);
     text-align: center;
+    border: 5px solid black;
+    border-radius: 15px;
+    
+
+}
+
+#gameTitle h2 {
+    font-weight: 200;
 }
 
 .gameButtons {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    background-color: gray;
+    background-color: rgb(252, 252, 252);
+    z-index: 1;
+    border: 5px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 5px 40px 0px;
 }
 
+#startGame {
+    border: 5px solid black;
+    border-radius: 15px; 
+}
+
+#submitButton {
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: 5px;
+}
 .currentGame {
     display: inline;
 }
@@ -25,36 +60,57 @@ body {
     background-color: lightgray;
     text-align: center;
 }
+/*------------------ letter container and letter tile styles------------------ */
 
-.container {
+/* container to hold game letter tiles */
+#container {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 40vh;
-    margin: auto;
+    width: 80%;
     background-color: lightgray;
+    border: 5px solid black;
+    border-radius: 15px;
 }
-
-#playersWord {
-    display: flex;
-}
-
+/* tiles to container letters */
 .tile {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 60px;
-    background-color: grey;
+    width: 6vh;
+    height: 9vh;
+    background-color: rgb(171, 169, 115);
     margin: 10px;
     font-size: 50px;
+    border-radius: 5px;
 }
+/* div which contains results */
+#result {
+    margin: 5px auto;
+    justify-content: center;
+    width: 90%;
+    background-color: lightgray;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+/* div to hold player letters of their answer */
+#playersWord {
+    display: flex;
+}
+
+
+
 
 ul {
     list-style: none;
 }
 
-/* modal styles */
+/*------------------------------- modal styles ------------------------------- */
 
 .modal {
     position: fixed;
@@ -68,11 +124,10 @@ ul {
     justify-content: center;
     padding: 1rem;
     background: grey;
-    border-color: black;
-    border-radius: 20px;
     cursor: pointer;
     visibility: hidden;
     opacity: 0;
+    z-index: 2;
 }
 
 .modal.is-visible {
