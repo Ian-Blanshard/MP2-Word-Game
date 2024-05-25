@@ -200,3 +200,55 @@ body {
 #notAWord div {
     font-size: 35px;
 }
+
+@media (max-height: 840px) {
+    .modal button {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-family: "Radio Canada Big", sans-serif;
+        font-size: 20px;
+    }
+    .modal h1 {
+        font-size: 30px;
+        margin-top: 0;
+    }
+    .modal h1 {
+        font-size: 25px;
+    }
+    #gameInstructions ul {
+        padding: 0;
+        margin: 5px;
+    }
+    /* container to hold game letter tiles */
+#container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 5px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    background-color: lightgray;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+/* tiles to container letters */
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6vh;
+    height: 9vh;
+    background-color: rgb(171, 169, 115);
+    margin: 4px;
+    font-size: 40px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+}

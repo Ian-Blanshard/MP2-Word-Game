@@ -196,8 +196,22 @@ function generateLetters() {
     for (let i = 0; i < 8 ; i++) {
         letters.push(consonants[Math.floor(Math.random() * consonants.length)]);
     }
+    //shuffle array 
+    letters = shuffleLetters(letters);
+    //return the shuffled array to use in game
     return letters;
 };
+//function to randomise the array of letters so all vowels aren't together
+//Uses Fisher-Yates shuffle learnt from site https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
+function shuffleLetters(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      return array;
+}
 //function to add the generated letters to the tiles on the page
 function addLettersToTiles() {
     //assign tile elements to a variable

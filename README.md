@@ -90,6 +90,9 @@ https://www.elated.com/javascript-timers-with-settimeout-and-setinterval/
 for learning to create modal 
 https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t
 
+for learning to shuffle an array
+https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
+
 ## Testing  <a name="testing"></a>
 s
 ### Bugs <a name="bugs"></a>
