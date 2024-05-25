@@ -200,7 +200,7 @@ body {
 #notAWord div {
     font-size: 35px;
 }
-
+/*------------------ styles for extrasmall mobile screens -------------------- */
 @media (max-height: 840px) {
     .modal button {
         margin-top: 5px;
@@ -245,10 +245,16 @@ body {
     height: 9vh;
     background-color: rgb(171, 169, 115);
     margin: 4px;
-    font-size: 40px;
+    font-size: 35px;
     border: 2px solid black;
     border-radius: 5px;
     text-transform: capitalize;
-    font-weight: 500;
+    font-weight: 500;   
+}
+#result .tile {
+    width: 4.8vh;
+    height: 7.2vh;
+    font-size: 28px;
+    margin: 5px;
 }
 }

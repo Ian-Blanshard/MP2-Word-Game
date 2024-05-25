@@ -35,6 +35,13 @@ const tiles = document.querySelectorAll('.tile');
 tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
+//event listener for timer
+const timerDisplaySpan = document.getElementById('countDownTimer');
+timerDisplaySpan.addEventListener('DOMSubtreeModified', () => {
+    if (timerDisplaySpan.textContent == "0") {
+        PlayerSubmitAnswer();
+    }
+});
 
 //event listener for showing modal when page first loads
 document.addEventListener('DOMContentLoaded', function() {
