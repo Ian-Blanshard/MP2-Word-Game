@@ -1,13 +1,13 @@
-
+/* import for google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
 
-
+/* body of the page */
 body {
     background-color: gray;
     margin: 0;
     font-family: "Radio Canada Big", sans-serif;
 }
-
+/* div which contains the whole game */
 #game {
     height: 100vh;
 }
@@ -18,14 +18,23 @@ body {
     text-align: center;
     border: 5px solid black;
     border-radius: 10px;
+    padding: 10px;
 }
 /* game title */
 #gameTitle h1 {
     margin-top: 5%;
+    margin-bottom: 2%;
 }
 /* high score and timer */
 #gameTitle h2 {
     font-weight: 200;
+    margin: 0;
+}
+#highScore, #countDownTimer {
+    font-weight: bold;
+}
+#gameTimer {
+    margin-bottom: 5%;
 }
 /*------------------ letter container and letter tile styles------------------ */
 /* container to hold game letter tiles */
@@ -53,13 +62,15 @@ body {
     background-color: rgb(171, 169, 115);
     margin: 10px;
     font-size: 50px;
+    border: 2px solid black;
     border-radius: 5px;
     text-transform: capitalize;
+    font-weight: 500;
 }
 /*---------------------- players answer tiles styles -------------------------- */
 /* div which contains results */
 #result {
-    margin: 5px auto;
+    margin: 10px auto;
     justify-content: center;
     text-align: center;
     width: 90%;
@@ -86,7 +97,7 @@ body {
     justify-content: center;
 }
 /*---------------------- game control buttons styles -------------------------- */
-
+/* div which contains buttons for player to control game */
 #gameButtons {
     position: fixed;
     bottom: 0;
@@ -99,34 +110,33 @@ body {
     box-sizing: border-box;
     padding: 5px 40px 0px;
 }
-
+/* h2 which act as buttons */
 #gameButtons h2 {
     margin: 2%;
     background-color: lightgray;
 }
-
+/* button to start game */
 #startGame {
     border: 2px solid black;
     border-radius: 10px; 
     font-weight: 200;
 }
-
+/* button to submit player answer */
 #submitButton {
     border: 2px solid black;
     border-radius: 10px;
     margin: 5px;
     font-weight: 200;
 }
-
 /*------------------------------- modal styles ------------------------------- */
-
+/* styles for all modals */
 .modal {
     position: fixed;
     color: black;
-    top: 5px;
-    left: 5px;
-    bottom: 5px;
-    right: 5px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,11 +144,33 @@ body {
     background: grey;
     cursor: pointer;
     visibility: hidden;
+    border: 20px solid black;
     opacity: 0;
     z-index: 2;
 }
-
+/* styles to add to make modals visible */
 .modal.is-visible {
     visibility: visible;
     opacity: 1;
+}
+
+#gameInstructions {
+    text-align: center;
+}
+
+#introduction h1 {
+    font-size: 50px;
+    margin-top: 0;
+}
+
+#gameInstructions ul {
+padding: 0;
+}
+
+#gameInstructions button {
+    margin-top: 40px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 24px;
 }
