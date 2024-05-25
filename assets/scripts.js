@@ -57,12 +57,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-function clearAllTiles() {
+function resetGameScreen() {
+    //clear letter from game tiles
     const tiles = document.querySelectorAll('.tile');
     tiles.forEach(tile => {
         tile.innerHTML = '';
     });
+    //clear player tiles from screen
     resetPlayerAnswer();
+    //set timer back to 30s
+    let timerDisplaySpan = document.getElementById('countDownTimer');
+    timerSeconds = 30;
+    timerDisplaySpan.textContent = timerSeconds;
+
 };
 
 //function which interacts with the dictionary API, allowing the program to check
@@ -141,7 +148,7 @@ function showCorrectWordModal(data) {
         const closeModalButton = modalClass.querySelector('[data-close]');
         closeModalButton.addEventListener('click', function() {
             modalClass.classList.remove('is-visible');
-            clearAllTiles();
+            resetGameScreen();
         });       
 };
 
@@ -161,7 +168,7 @@ function notAWord() {
     const closeModalButton = modalClass.querySelector('[data-close]');
     closeModalButton.addEventListener('click', function() {
         modalClass.classList.remove('is-visible');
-        clearAllTiles();
+        resetGameScreen();
     });   
 };
 //function to add player selected letters to tiles in the result area of the page
