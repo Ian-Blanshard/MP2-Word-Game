@@ -114,7 +114,9 @@ function showCorrectWordModal(data) {
         //assign the div for holding the result text to a variable
         const correctWordModalDiv =  document.getElementById('isAWordResult');
         //enter the resutl text into the div
-        correctWordModalDiv.innerText = `The word you entered was ${data[0].word}. This scored ${playerScore}`;
+        correctWordModalDiv.innerHTML = `<h1>Well Done!</h1>
+                                         <div>The word you entered was <span id="word">${data[0].word}</span>.</div>
+                                         <div> This scored <span id="score">${playerScore}</span> points</div>`;
         //assign the isAWord div to modalClass variable 
         const modalClass = document.getElementById('isAWord');
         //add the is-visible CSS rules to make the modal visible
@@ -132,7 +134,8 @@ function notAWord() {
     //assign the div for holding the result text to a variable
     const correctWordModalDiv =  document.getElementById('notAWordResult');
     //enter the result text into the div
-    correctWordModalDiv.innerText = `The word you entered does not score as it does not exist in the english dictionary`;
+    correctWordModalDiv.innerHTML = `<h1>Unlucky!</h1>
+                                     <div>The word you entered did not score, as it does not exist in the english dictionary</div>`;
     //assign the notAWord div to modalClass variable 
     const modalClass = document.getElementById('notAWord');
     //add the is-visible CSS rules to make the modal visible

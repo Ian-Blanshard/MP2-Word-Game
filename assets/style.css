@@ -18,23 +18,26 @@ body {
     text-align: center;
     border: 5px solid black;
     border-radius: 10px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 /* game title */
 #gameTitle h1 {
-    margin-top: 5%;
-    margin-bottom: 2%;
+    margin: 1%;
+    padding-top: 1%;
 }
 /* high score and timer */
 #gameTitle h2 {
     font-weight: 200;
-    margin: 0;
+    margin: 1%;
 }
 #highScore, #countDownTimer {
     font-weight: bold;
+    
 }
 #gameTimer {
-    margin-bottom: 5%;
+    margin-bottom: 5% !important;
 }
 /*------------------ letter container and letter tile styles------------------ */
 /* container to hold game letter tiles */
@@ -139,38 +142,61 @@ body {
     right: 0;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     padding: 1rem;
-    background: grey;
+    background-color: lightgray;
     cursor: pointer;
     visibility: hidden;
-    border: 20px solid black;
+    border: 15px solid black;
     opacity: 0;
     z-index: 2;
+}
+.modal button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-family: "Radio Canada Big", sans-serif;
+    font-size: 24px;
 }
 /* styles to add to make modals visible */
 .modal.is-visible {
     visibility: visible;
     opacity: 1;
 }
+/*-------------------- game instruction modal styles ------------------------- */
 
-#gameInstructions {
-    text-align: center;
-}
-
+/* styles for the game title */
 #introduction h1 {
     font-size: 50px;
     margin-top: 0;
 }
-
+/* styles for the list of instructions */
 #gameInstructions ul {
-padding: 0;
+    padding: 0;
+}
+#instructions h1 {
+    font-size: 35px;
+}
+/*-------------------- is a word modal styles -------------------------------- */
+#score {
+    color: white;
+}
+#isAWord h1 {
+    font-size: 50px;
+}
+#word {
+    color: white;
+}
+#isAWord div {
+    font-size: 35px;
 }
 
-#gameInstructions button {
-    margin-top: 40px;
-    padding: 20px 40px;
-    border-radius: 10px;
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: 24px;
+/*------------------- not a word instruction modal styles -------------------- */
+#notAWord h1 {
+    font-size: 50px;
+}
+#notAWord div {
+    font-size: 35px;
 }
