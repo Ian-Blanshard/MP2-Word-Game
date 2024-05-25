@@ -35,9 +35,9 @@ const tiles = document.querySelectorAll('.tile');
 tiles.forEach(tile => {
     tile.addEventListener('click',playerGameTileClick)
 });
-//event listener for timer
+//event listener for timer reaching 0
 const timerDisplaySpan = document.getElementById('countDownTimer');
-timerDisplaySpan.addEventListener('DOMSubtreeModified', () => {
+timerDisplaySpan.addEventListener('DOMSubtreeModified', function() {
     if (timerDisplaySpan.textContent == "0") {
         PlayerSubmitAnswer();
     }
@@ -56,6 +56,14 @@ document.addEventListener('DOMContentLoaded', function() {
         modalClass.classList.remove('is-visible');
     });
 });
+
+function clearAllTiles() {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach(tile => {
+        tile.innerHTML = '';
+    });
+    resetPlayerAnswer();
+};
 
 //function which interacts with the dictionary API, allowing the program to check
 //whether the player answer is a word in the english dictionary  
@@ -133,6 +141,7 @@ function showCorrectWordModal(data) {
         const closeModalButton = modalClass.querySelector('[data-close]');
         closeModalButton.addEventListener('click', function() {
             modalClass.classList.remove('is-visible');
+            clearAllTiles();
         });       
 };
 
@@ -152,6 +161,7 @@ function notAWord() {
     const closeModalButton = modalClass.querySelector('[data-close]');
     closeModalButton.addEventListener('click', function() {
         modalClass.classList.remove('is-visible');
+        clearAllTiles();
     });   
 };
 //function to add player selected letters to tiles in the result area of the page
