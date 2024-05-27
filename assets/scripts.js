@@ -110,19 +110,25 @@ function playerGameTileClick() {
     //create tiles for all current letters in playersWord array
     updateAnswerTiles();
 }
+
+
 //function to return string containing players answer, when the submit button is clicked
 function PlayerSubmitAnswer() {
-    //join the playersWord answer array into a single string
-    let wordToCheck = playersWord.join('');
-    //log to console !!!!! remove in final build !!!!!
-    console.log(wordToCheck);
-    //cancel the timer
-    clearInterval(countSecond);
-    //calculate the player score
-    calculatePlayerScore();
-    //run the function which interacts with API, passing the callback
-    //and the wordToCheck
-    getDataFromApi(correctWordEntered, wordToCheck);
+    if (playersWord.length > 2) {
+        //join the playersWord answer array into a single string
+        let wordToCheck = playersWord.join('');
+        //log to console !!!!! remove in final build !!!!!
+        console.log(wordToCheck);
+        //cancel the timer
+        clearInterval(countSecond);
+        //calculate the player score
+        calculatePlayerScore();
+        //run the function which interacts with API, passing the callback
+        //and the wordToCheck
+        getDataFromApi(correctWordEntered, wordToCheck);
+    } else {
+        
+    }
 }
 //function to alert user that their answer was found in the dictionary
 function correctWordEntered(data) {
@@ -171,17 +177,31 @@ function notAWord() {
         resetGameScreen();
     });   
 };
-//function to add player selected letters to tiles in the result area of the page
+
+/** function to add player selected letters to tiles in the result area of the page*/
 function updateAnswerTiles() {
     let playersWordDiv = document.getElementById('playersWord');
     playersWordDiv.innerHTML = '';
-    for (let word of playersWord) {
-    playersWordDiv.innerHTML += `<div class='tile'>${word}</div>`;
-    };
+    playersWord.forEach((letter, index) => {
+        let answerTile = document.createElement('div');
+        answerTile.innerHTML = `${letter}`;
+        answerTile.className = 'tile'
+
+        // Add event listener to remove the tile on click
+        answerTile.addEventListener('click', () => {
+            // Remove the letter from the playersWord array
+            playersWord.splice(index, 1); 
+            // Update the tiles display
+            updateAnswerTiles(); 
+        });
+
+        playersWordDiv.appendChild(answerTile);
+    });
 };
+
 //function to start new game timer
 function startNewGameTimer() {
-    //assign the span to hold the timer to the variable timerDisplaySpan
+    // assign the span to hold the timer to the variable timerDisplaySpan
     let timerDisplaySpan = document.getElementById('countDownTimer');
     //clear any existing timers
     clearInterval(countSecond);

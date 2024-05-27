@@ -200,6 +200,11 @@ body {
 #notAWord div {
     font-size: 35px;
 }
+
+/*------------------- too short word instruction modal styles -------------------- */
+#tooShortWord {
+
+}
 /*------------------ styles for extrasmall mobile screens -------------------- */
 @media (max-height: 840px) {
     .modal button {
