@@ -36,9 +36,7 @@ body {
     font-weight: bold;
     
 }
-#gameTimer {
-    margin-bottom: 5% !important;
-}
+
 /*------------------ letter container and letter tile styles------------------ */
 /* container to hold game letter tiles */
 #container {
@@ -77,7 +75,7 @@ body {
     justify-content: center;
     text-align: center;
     width: 90%;
-    height: 15%;
+    height: 14%;
     background-color: lightgray;
     border: 5px solid black;
     border-radius: 10px;
@@ -203,7 +201,7 @@ body {
 
 /*------------------- too short word instruction modal styles -------------------- */
 #tooShortWord {
-
+    font-size: 35px;
 }
 /*------------------ styles for extrasmall mobile screens -------------------- */
 @media (max-height: 840px) {
@@ -263,3 +261,31 @@ body {
     margin: 5px;
 }
 }
+
+@media (max-width: 386px) {
+    #container {
+        width:200px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+}
+
+
+
+@media (min-width: 438px) and (max-width: 775px) {
+    #container {
+        width: 360px;
+    }
+}
+
+@media (min-width: 455px) {
+    #startGame, #submitButton {
+        width: 350px;
+    }
+    #gameButtons {
+        justify-content: center;
+        display: grid;
+    }
+}
+

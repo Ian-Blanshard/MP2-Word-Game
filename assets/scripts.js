@@ -127,7 +127,15 @@ function PlayerSubmitAnswer() {
         //and the wordToCheck
         getDataFromApi(correctWordEntered, wordToCheck);
     } else {
-        
+        const modalClass = document.getElementById('tooShortWord');
+    //add the is-visible CSS rules to make the modal visible
+    modalClass.classList.add('is-visible');
+    //event listener for the close button on modal 
+    //assign close button to variable closeModalButton
+    const closeModalButton = modalClass.querySelector('[data-close]');
+    closeModalButton.addEventListener('click', function() {
+        modalClass.classList.remove('is-visible');
+    });
     }
 }
 //function to alert user that their answer was found in the dictionary
