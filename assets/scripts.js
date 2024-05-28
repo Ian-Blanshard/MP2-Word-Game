@@ -100,6 +100,7 @@ function resetPlayerAnswer() {
     while (answerTiles.length > 0) {
         playersWordDiv.removeChild(answerTiles[0]);
     }
+    playersWord = [];
 };
 //function to respond when the player clicks on of the game tiles
 function playerGameTileClick() {
@@ -202,8 +203,9 @@ function updateAnswerTiles() {
             // Update the tiles display
             updateAnswerTiles(); 
         });
+        
 
-        playersWordDiv.appendChild(answerTile);
+        if (answerTile.innerHTML != '') {playersWordDiv.appendChild(answerTile);}
     });
 };
 

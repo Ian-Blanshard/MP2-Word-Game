@@ -80,8 +80,9 @@ h1, h2, section {
     font-weight: 500;
     
     
-    animation: neon 1.5s ease-in-out infinite alternate, createBox 5s;
+    animation: neon 1.5s ease-in-out infinite alternate;
 }
+
 /*---------------------- players answer tiles styles -------------------------- */
 /* div which contains results */
 #result {
