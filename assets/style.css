@@ -3,7 +3,7 @@
 
 /* body of the page */
 body {
-    background-color: gray;
+    background-image: url(/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
     margin: 0;
     font-family: "Radio Canada Big", sans-serif;
 }
@@ -11,26 +11,37 @@ body {
 #game {
     height: 100vh;
 }
+
+h1, h2, section {
+   color: #b7ff00bc; 
+   
+}
 /*--------------------------- game header styles ----------------------------- */
 /* div holding title, highscore and timer */
 #gameTitle {
-    background-color: lightgray;
+    width: 100%;
     text-align: center;
-    border: 5px solid black;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
 }
 /* game title */
 #gameTitle h1 {
+    font-size: 50px;
     margin: 1%;
     padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: black;
+    border: 2px solid #b6ff00;
+    box-shadow: 2.5px 2.5px 5px #b6ff00;
+    border-radius: 10px;
 }
 /* high score and timer */
 #gameTitle h2 {
     font-weight: 200;
     margin: 1%;
+    
 }
 #highScore, #countDownTimer {
     font-weight: bold;
@@ -49,9 +60,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
-    background-color: lightgray;
-    border: 5px solid black;
+    
     border-radius: 10px;
+    
 }
 /* tiles to container letters */
 .tile {
@@ -67,6 +78,9 @@ body {
     border-radius: 5px;
     text-transform: capitalize;
     font-weight: 500;
+    
+    
+    animation: neon 1.5s ease-in-out infinite alternate, createBox 5s;
 }
 /*---------------------- players answer tiles styles -------------------------- */
 /* div which contains results */
@@ -76,9 +90,10 @@ body {
     text-align: center;
     width: 90%;
     height: 14%;
-    background-color: lightgray;
-    border: 5px solid black;
     border-radius: 10px;
+    background-color: black;
+    border: 2px solid #b6ff00;
+    box-shadow: 2.5px 2.5px 5px #b6ff00;
 }
 /* title for players word */
 #result h2 {
@@ -104,30 +119,34 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: lightgray;
+    
     z-index: 1;
-    border: 5px solid black;
     border-radius: 10px;
-    box-sizing: border-box;
-    padding: 5px 40px 0px;
+    padding-top: 40px;
+    
 }
 /* h2 which act as buttons */
 #gameButtons h2 {
     margin: 2%;
-    background-color: lightgray;
+    background-color: rgb(171, 169, 115);
+    color: black;
+    animation: neon 1.5s ease-in-out infinite alternate;
+    border: 2px solid black;
+    border-radius: 5px;
+    
 }
 /* button to start game */
 #startGame {
-    border: 2px solid black;
+    border: 2px solid #b6ff00;
+    box-shadow: 2.5px 2.5px 5px #b6ff00;
     border-radius: 10px; 
-    font-weight: 200;
 }
 /* button to submit player answer */
 #submitButton {
-    border: 2px solid black;
+    border: 2px solid #b6ff00;
+    box-shadow: 2.5px 2.5px 5px #b6ff00;
     border-radius: 10px;
     margin: 5px;
-    font-weight: 200;
 }
 /*------------------------------- modal styles ------------------------------- */
 /* styles for all modals */
@@ -143,7 +162,7 @@ body {
     text-align: center;
     justify-content: center;
     padding: 1rem;
-    background-color: lightgray;
+    background-image: url(/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
     cursor: pointer;
     visibility: hidden;
     border: 15px solid black;
@@ -169,6 +188,7 @@ body {
 #introduction h1 {
     font-size: 50px;
     margin-top: 0;
+    animation: neonText 1.5s ease-in-out infinite alternate;
 }
 /* styles for the list of instructions */
 #gameInstructions ul {
@@ -235,7 +255,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
-    background-color: lightgray;
     border: 5px solid black;
     border-radius: 10px;
 }
@@ -272,7 +291,6 @@ body {
 }
 
 
-
 @media (min-width: 438px) and (max-width: 775px) {
     #container {
         width: 360px;
@@ -289,3 +307,36 @@ body {
     }
 }
 
+/*------------------ animations -------------------- */
+
+@keyframes neon {
+    from {
+      box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #b6ff00,
+        0 0 15px #b6ff00, 0 0 18px #b6ff00, 0 0 21px #b6ff00, 0 0 24px #b6ff00;
+    }
+    to {
+      box-shadow: 0 0 1.5px #fff, 0 0 3px #fff, 0 0 4.5px #fff, 0 0 6px #b6ff00,
+        0 0 7.5px #b6ff00, 0 0 9px #b6ff00, 0 0 10.5px #b6ff00, 0 0 12px #b6ff00;
+    }
+  }
+
+  @keyframes neonText {
+    from {
+      text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #b6ff00,
+        0 0 15px #b6ff00, 0 0 18px #b6ff00, 0 0 21px #b6ff00, 0 0 24px #b6ff00;
+    }
+    to {
+      text-shadow: 0 0 1.5px #fff, 0 0 3px #fff, 0 0 4.5px #fff, 0 0 6px #b6ff00,
+        0 0 7.5px #b6ff00, 0 0 9px #b6ff00, 0 0 10.5px #b6ff00, 0 0 12px #b6ff00;
+    }
+  }
+
+
+  @keyframes createBox {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }

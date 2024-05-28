@@ -93,6 +93,11 @@ https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css
 for learning to shuffle an array
 https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
 
+using shadows for boxes and letters
+https://css-tricks.com/getting-deep-into-shadows/
+
+https://www.noisetexturegenerator.com/
+
 ## Testing  <a name="testing"></a>
 s
 ### Bugs <a name="bugs"></a>
