@@ -24,7 +24,6 @@ h1, h2, section {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    
 }
 /* game title */
 #gameTitle h1 {
@@ -204,6 +203,7 @@ h1, h2, section {
 }
 #isAWord h1 {
     font-size: 50px;
+    animation: createBox 3s;
 }
 #word {
     color: white;
@@ -215,6 +215,7 @@ h1, h2, section {
 /*------------------- not a word instruction modal styles -------------------- */
 #notAWord h1 {
     font-size: 50px;
+    animation: createBox 3s;
 }
 #notAWord div {
     font-size: 35px;
