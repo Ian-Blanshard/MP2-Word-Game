@@ -1,13 +1,51 @@
 //global variables
-//array to hold letters;
+
+// array to hold letters;
 let playersWord = [];
-//variable to hold interval timer
+// variable to hold interval timer
 let countSecond;
-//variable to hold timerseconds
+// variable to hold timerseconds
 let timerSeconds;
-//variable to hold the playerScore
+// variable to hold the playerScore
 let playerScore;
 
+// event listeners
+
+// event listener for start game button
+const startButton = document.getElementById('startGame');
+    startButton.addEventListener('click', startNewGame);
+
+// event listener for submit button
+const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click',PlayerSubmitAnswer);
+
+// event listener for each tile which runs the playerGameTileClick function when clicked
+const tiles = document.querySelectorAll('.tile');
+// use forEach to loop through all tiles and apply eventlisteners to all of them
+tiles.forEach(tile => {
+    tile.addEventListener('click',playerGameTileClick)
+});
+// event listener for timer reaching 0
+const timerDisplaySpan = document.getElementById('countDownTimer');
+timerDisplaySpan.addEventListener('DOMSubtreeModified', function() {
+    if (timerDisplaySpan.textContent == "0") {
+        PlayerSubmitAnswer();
+    }
+});
+
+// event listener for showing modal when page first loads
+document.addEventListener('DOMContentLoaded', function() {
+    // assign the gameInstructions div to modalClass variable 
+    const modalClass = document.getElementById('gameInstructions');
+    // add the is-visible CSS rules to make the modal visible
+    modalClass.classList.add('is-visible');
+    // event listener for the close button on modal 
+    // assign close button to variable closeModalButton
+    const closeModalButton = modalClass.querySelector('[data-close]');
+    closeModalButton.addEventListener('click', function() {
+        modalClass.classList.remove('is-visible');
+    });
+});
 
 /** function to start new game/ main game loop */
 function startNewGame() {
@@ -20,42 +58,6 @@ function startNewGame() {
     //add letters to the tiles
     addLettersToTiles();
 };
-
-//event listener for start game button
-const startButton = document.getElementById('startGame');
-    startButton.addEventListener('click', startNewGame);
-
-//event listener for submit button
-const submitButton = document.getElementById('submitButton');
-    submitButton.addEventListener('click',PlayerSubmitAnswer);
-
-//event listener for each tile which runs the playerGameTileClick function when clicked
-const tiles = document.querySelectorAll('.tile');
-//use forEach to loop through all tiles and apply eventlisteners to all of them
-tiles.forEach(tile => {
-    tile.addEventListener('click',playerGameTileClick)
-});
-//event listener for timer reaching 0
-const timerDisplaySpan = document.getElementById('countDownTimer');
-timerDisplaySpan.addEventListener('DOMSubtreeModified', function() {
-    if (timerDisplaySpan.textContent == "0") {
-        PlayerSubmitAnswer();
-    }
-});
-
-//event listener for showing modal when page first loads
-document.addEventListener('DOMContentLoaded', function() {
-    //assign the gameInstructions div to modalClass variable 
-    const modalClass = document.getElementById('gameInstructions');
-    //add the is-visible CSS rules to make the modal visible
-    modalClass.classList.add('is-visible');
-    //event listener for the close button on modal 
-    //assign close button to variable closeModalButton
-    const closeModalButton = modalClass.querySelector('[data-close]');
-    closeModalButton.addEventListener('click', function() {
-        modalClass.classList.remove('is-visible');
-    });
-});
 
 /** function to reset timer and remove player tiles from answer div */
 function resetGameScreen() {
