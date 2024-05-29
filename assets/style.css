@@ -203,23 +203,30 @@ h1, h2, section {
 }
 #isAWord h1 {
     font-size: 50px;
-    animation: createBox 3s;
+    animation: createBox 1s;
 }
 #word {
     color: white;
 }
 #isAWord div {
     font-size: 35px;
+    animation: createBox 1s 1s forwards;
+    transform: scale(0);
 }
+
+
 
 /*------------------- not a word instruction modal styles -------------------- */
 #notAWord h1 {
     font-size: 50px;
-    animation: createBox 3s;
+    animation: createBox 1s;
 }
 #notAWord div {
     font-size: 35px;
+    animation: createBox 1s 1s forwards;
+    transform: scale(0);
 }
+
 
 /*------------------- too short word instruction modal styles -------------------- */
 #tooShortWord {

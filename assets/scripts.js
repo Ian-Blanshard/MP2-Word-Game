@@ -9,7 +9,7 @@ let timerSeconds;
 let playerScore;
 
 
-//function to start new game/ main game loop
+/** function to start new game/ main game loop */
 function startNewGame() {
     //reset the playersWord array
     playersWord = [];
@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+/** function to reset timer and remove player tiles from answer div */
 function resetGameScreen() {
     //clear letter from game tiles
     const tiles = document.querySelectorAll('.tile');
@@ -69,11 +70,10 @@ function resetGameScreen() {
     let timerDisplaySpan = document.getElementById('countDownTimer');
     timerSeconds = 30;
     timerDisplaySpan.textContent = timerSeconds;
-
 };
 
-//function which interacts with the dictionary API, allowing the program to check
-//whether the player answer is a word in the english dictionary  
+/** function which interacts with the dictionary API, allowing the program to check
+whether the player answer is a word in the english dictionary */
 function getDataFromApi(callback, wordToCheck){
     //create new instance of XMLHttp request and assign it to a variable 
     var xhr = new XMLHttpRequest(); 
@@ -93,7 +93,8 @@ function getDataFromApi(callback, wordToCheck){
         }
     };
 };
-//function to remove player answer tiles 
+
+/** function to remove player answer tiles */
 function resetPlayerAnswer() {
     let playersWordDiv = document.getElementById('playersWord');
     let answerTiles = playersWordDiv.getElementsByClassName('tile');
@@ -102,7 +103,8 @@ function resetPlayerAnswer() {
     }
     playersWord = [];
 };
-//function to respond when the player clicks on of the game tiles
+
+/** function to respond when the player clicks on of the game tiles */
 function playerGameTileClick() {
     //add the letter from the clicked tile to the playersWord array
     playersWord.push(this.innerHTML);
@@ -112,8 +114,7 @@ function playerGameTileClick() {
     updateAnswerTiles();
 }
 
-
-//function to return string containing players answer, when the submit button is clicked
+/** function to return string containing players answer, when the submit button is clicked */
 function PlayerSubmitAnswer() {
     if (playersWord.length > 2) {
         //join the playersWord answer array into a single string
@@ -139,7 +140,8 @@ function PlayerSubmitAnswer() {
     });
     }
 }
-//function to alert user that their answer was found in the dictionary
+
+/** function to alert user that their answer was found in the dictionary */
 function correctWordEntered(data) {
     //show the 
     showCorrectWordModal(data);
@@ -147,6 +149,7 @@ function correctWordEntered(data) {
     updateHighscore();
     }; 
 
+/** function to display the modal for a correct word which achieves a score */    
 function showCorrectWordModal(data) {
         //assign the div for holding the result text to a variable
         const correctWordModalDiv =  document.getElementById('isAWordResult');
@@ -167,7 +170,7 @@ function showCorrectWordModal(data) {
         });       
 };
 
-//functon to alert user that their answer was not found in the dictionary
+/** function to display the modal for an incorrect word which does not score */
 function notAWord() {
     //assign the div for holding the result text to a variable
     const correctWordModalDiv =  document.getElementById('notAWordResult');
@@ -187,7 +190,7 @@ function notAWord() {
     });   
 };
 
-/** function to add player selected letters to tiles in the result area of the page*/
+/** function to add player selected letters to tiles in the result area of the page */
 function updateAnswerTiles() {
     let playersWordDiv = document.getElementById('playersWord');
     playersWordDiv.innerHTML = '';
@@ -195,7 +198,6 @@ function updateAnswerTiles() {
         let answerTile = document.createElement('div');
         answerTile.innerHTML = `${letter}`;
         answerTile.className = 'tile'
-
         // Add event listener to remove the tile on click
         answerTile.addEventListener('click', () => {
             // Remove the letter from the playersWord array
@@ -209,7 +211,7 @@ function updateAnswerTiles() {
     });
 };
 
-//function to start new game timer
+/** function to start new game timer */
 function startNewGameTimer() {
     // assign the span to hold the timer to the variable timerDisplaySpan
     let timerDisplaySpan = document.getElementById('countDownTimer');
@@ -231,8 +233,9 @@ function startNewGameTimer() {
             clearInterval(countSecond);
         }
     }, 1000);
-}
-//function to generate 12 random letters
+};
+
+/** function to generate 12 random letters */
 function generateLetters() {
     //an array holding consonants
     let consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p',
@@ -255,8 +258,9 @@ function generateLetters() {
     //return the shuffled array to use in game
     return letters;
 };
-//function to randomise the array of letters so all vowels aren't together
-//Uses Fisher-Yates shuffle learnt from site https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
+
+/** function to randomise the array of letters so all vowels aren't together,
+Uses Fisher-Yates shuffle learnt from site https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj */
 function shuffleLetters(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -266,7 +270,8 @@ function shuffleLetters(array) {
       }
       return array;
 }
-//function to add the generated letters to the tiles on the page
+
+/** function to add the generated letters to the tiles on the page */
 function addLettersToTiles() {
     //assign tile elements to a variable
     let tiles = document.getElementsByClassName('tile');
@@ -283,14 +288,16 @@ function addLettersToTiles() {
         i++;
     };
 };
-//function to calculate player score for the word they entered
+
+/** function to calculate player score for the word they entered */
 function calculatePlayerScore() {
     //multiply the length of the word by the remaining seconds
     playerScore = playersWord.length * timerSeconds;
     //log to console !!!!! remove in final build !!!!!
     console.log(playerScore);
 };
-//function to update highscore if new player score is highest yet
+
+/** function to update highscore if new player score is highest yet */
 function updateHighscore() {
     //assign the span to place the score in to highScoreDiv
     const highScoreDiv = document.getElementById('highScore');
