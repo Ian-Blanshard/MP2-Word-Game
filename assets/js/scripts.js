@@ -164,26 +164,26 @@ function showCorrectWordModal(data) {
                                     <h1>Well Done!</h1>
                                     <div>The word you entered was <span id="word">${data[0].word}</span>.</div>
                                     <div> This scored <span id="score">${playerScore}</span> points</div>
-                                    <br>`;}
-  else if (playerScore <= 100) {
+                                    <br>`;
+  } else if (playerScore <= 100) {
     correctWordModalDiv.innerHTML = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     <h1>Well Done!</h1>
                                     <div>The word you entered was <span id="word">${data[0].word}</span>.</div>
                                     <div> This scored <span id="score">${playerScore}</span> points</div>
-                                    <br>`;}
-  else if (playerScore <= 150) {
+                                    <br>`;
+  } else if (playerScore <= 150) {
     correctWordModalDiv.innerHTML = `<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                                     <h1>Well Done!</h1>
                                     <div>The word you entered was <span id="word">${data[0].word}</span>.</div>
                                     <div> This scored <span id="score">${playerScore}</span> points</div>
-                                    <br>`;}
-  else if (playerScore > 150) {
+                                    <br>`;
+  } else if (playerScore > 150) {
     correctWordModalDiv.innerHTML = `<i class="fa-solid fa-fire"></i><i class="fa-solid fa-fire"></i><i class="fa-solid fa-fire"></i>
                                     <h1>Well Done!</h1>
                                     <div>The word you entered was <span id="word">${data[0].word}</span>.</div>
                                     <div> This scored <span id="score">${playerScore}</span> points</div>
-                                    <br>`;}
-
+                                    <br>`;
+  }
 
   //assign the isAWord div to modalClass variable
   const modalClass = document.getElementById("isAWord");

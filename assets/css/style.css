@@ -1,273 +1,268 @@
 /* import for google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&display=swap");
 
 /* body of the page */
 body {
-    background-image: url(/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
-    margin: 0;
-    font-family: "Radio Canada Big", sans-serif;
+  background-image: url(/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
+  margin: 0;
+  font-family: "Radio Canada Big", sans-serif;
 }
 /* div which contains the whole game */
 #game {
-    height: 100vh;
+  height: 100vh;
 }
 
-h1, h2, section {
-   color: #b7ff00bc; 
-   
+h1,
+h2,
+section {
+  color: #b7ff00bc;
 }
 /*--------------------------- game header styles ----------------------------- */
 /* div holding title, highscore and timer */
 #gameTitle {
-    width: 100%;
-    text-align: center;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 /* game title */
 #gameTitle h1 {
-    font-size: 50px;
-    margin: 1%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    background-color: black;
-    border: 2px solid #b6ff00;
-    box-shadow: 2.5px 2.5px 24px #b6ff00;
-    border-radius: 10px;
+  font-size: 50px;
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: black;
+  color: #b6ff00;
+  border: 2px solid #b6ff00;
+  box-shadow: 2.5px 2.5px 24px #b6ff00;
+  border-radius: 10px;
 }
 /* high score and timer */
 #gameTitle h2 {
-    font-weight: 200;
-    margin: 1%;
-    
+  font-weight: 200;
+  margin: 1%;
+  color: #b6ff00;
 }
-#highScore, #countDownTimer {
-    font-weight: bold;
-    
+#highScore,
+#countDownTimer {
+  font-weight: bold;
+  color: #b6ff00;
 }
 
 /*------------------ letter container and letter tile styles------------------ */
 /* container to hold game letter tiles */
 #container {
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 5%;
-    padding-right: 5%;
-    margin: 5px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 80%;
-    
-    border-radius: 10px;
-    
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 5px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+
+  border-radius: 10px;
 }
 /* tiles to container letters */
 .tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 6vh;
-    height: 9vh;
-    background-color: rgb(171, 169, 115);
-    margin: 10px;
-    font-size: 50px;
-    border: 2px solid black;
-    border-radius: 5px;
-    text-transform: capitalize;
-    font-weight: 500;
-    
-    
-    animation: neon 1.5s ease-in-out infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6vh;
+  height: 9vh;
+  background-color: rgb(171, 169, 115);
+  margin: 10px;
+  font-size: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-transform: capitalize;
+  font-weight: 500;
+
+  animation: neon 1.5s ease-in-out infinite alternate;
 }
 
 /*---------------------- players answer tiles styles -------------------------- */
 /* div which contains results */
 #result {
-    margin: 10px auto;
-    justify-content: center;
-    text-align: center;
-    width: 90%;
-    height: 14%;
-    border-radius: 10px;
-    background-color: black;
-    border: 2px solid #b6ff00;
-    box-shadow: 2.5px 2.5px 24px #b6ff00;
+  margin: 10px auto;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  height: 14%;
+  border-radius: 10px;
+  background-color: black;
+  border: 2px solid #b6ff00;
+  box-shadow: 2.5px 2.5px 24px #b6ff00;
 }
 /* title for players word */
 #result h2 {
-    margin: 0;
-    font-weight: 200;
+  margin: 0;
+  font-weight: 200;
+  color: #b6ff00;
 }
 /* changes to tile class rules for tiles in player answer */
 #result .tile {
-    width: 4.8vh;
-    height: 7.2vh;
-    font-size: 40px;
-    margin: 5px;
+  width: 4.8vh;
+  height: 7.2vh;
+  font-size: 40px;
+  margin: 5px;
 }
 /* div to hold player letters of their answer */
 #playersWord {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 /*---------------------- game control buttons styles -------------------------- */
 /* div which contains buttons for player to control game */
 #gameButtons {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    
-    z-index: 1;
-    border-radius: 10px;
-    padding-top: 40px;
-    
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+
+  z-index: 1;
+  border-radius: 10px;
+  padding-top: 40px;
 }
 /* h2 which act as buttons */
 #gameButtons h2 {
-    margin: 2%;
-    background-color: rgb(171, 169, 115);
-    color: black;
-    animation: neon 1.5s ease-in-out infinite alternate;
-    border: 2px solid black;
-    border-radius: 5px;
-    
+  margin: 2%;
+  background-color: rgb(171, 169, 115);
+  color: black;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 /* button to start game */
 #startGame {
-    border: 2px solid #b6ff00;
-    box-shadow: 2.5px 2.5px 5px #b6ff00;
-    border-radius: 10px; 
+  border: 2px solid #b6ff00;
+  box-shadow: 2.5px 2.5px 5px #b6ff00;
+  border-radius: 10px;
 }
 /* button to submit player answer */
 #submitButton {
-    border: 2px solid #b6ff00;
-    box-shadow: 2.5px 2.5px 5px #b6ff00;
-    border-radius: 10px;
-    margin: 5px;
+  border: 2px solid #b6ff00;
+  box-shadow: 2.5px 2.5px 5px #b6ff00;
+  border-radius: 10px;
+  margin: 5px;
 }
 /*------------------------------- modal styles ------------------------------- */
 /* styles for all modals */
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 1rem;
-    background-image: url(/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
-    cursor: pointer;
-    visibility: hidden;
-    border: 15px solid black;
-    opacity: 0;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding: 1rem;
+  background-image: url(/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
+  cursor: pointer;
+  visibility: hidden;
+  border: 15px solid black;
+  opacity: 0;
+  z-index: 2;
 }
 .modal button {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 20px 40px;
-    border-radius: 10px;
-    font-family: "Radio Canada Big", sans-serif;
-    font-size: 24px;
-    background-color: rgb(171, 169, 115);
-    animation: neon 1.5s ease-in-out infinite alternate;
-    border: 2px solid black;
-    border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  background-color: rgb(171, 169, 115);
+  animation: neon 1.5s ease-in-out infinite alternate;
+  border: 2px solid black;
+  font-family: "Radio Canada Big", sans-serif;
 }
 /* styles to add to make modals visible */
 .modal.is-visible {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 /*-------------------- game instruction modal styles ------------------------- */
 
 /* styles for the game title */
 #introduction h1 {
-    font-size: 50px;
-    margin-top: 0;
-    animation: neonText 1.5s ease-in-out infinite alternate;
+  font-size: 50px;
+  margin-top: 0;
+  color: #b6ff00;
 }
 /* styles for the list of instructions */
 #gameInstructions ul {
-    padding: 0;
+  padding: 10px;
 }
 #instructions h1 {
-    font-size: 35px;
+  font-size: 35px;
+  margin-top: 20px;
+  color: #b6ff00;
 }
 /*-------------------- is a word modal styles -------------------------------- */
 #score {
-    color: white;
+  color: white;
 }
-#isAWord h1, i {
-    font-size: 50px;
-    animation: createBox 1s;
+#isAWord h1,
+i {
+  font-size: 50px;
+  animation: createBox 1s;
 }
 #word {
-    color: white;
+  color: white;
 }
 #isAWord div {
-    font-size: 35px;
-    animation: createBox 1s 1s forwards;
-    transform: scale(0);
-    margin-bottom: 40px;
+  font-size: 35px;
+  animation: createBox 1s 1s forwards;
+  transform: scale(0);
+  margin-bottom: 40px;
 }
-.fa-star, .fa-fire {
-    margin-bottom: 40px;
+.fa-star,
+.fa-fire {
+  margin-bottom: 40px;
 }
-
-
-
 
 /*------------------- not a word instruction modal styles -------------------- */
 #notAWord h1 {
-    font-size: 50px;
-    animation: createBox 1s;
+  font-size: 50px;
+  animation: createBox 1s;
 }
 #notAWord div {
-    font-size: 35px;
-    animation: createBox 1s 1s forwards;
-    transform: scale(0);
-    margin-bottom: 40px;
+  font-size: 35px;
+  animation: createBox 1s 1s forwards;
+  transform: scale(0);
+  margin-bottom: 40px;
 }
-
 
 /*------------------- too short word instruction modal styles -------------------- */
 #tooShortWord {
-    font-size: 35px;
+  font-size: 35px;
 }
 #tooShortWord div {
-    font-size: 35px;
-    margin-bottom: 40px;
+  font-size: 35px;
+  margin-bottom: 40px;
 }
 /*------------------ styles for extrasmall mobile screens -------------------- */
 @media (max-height: 840px) {
-    .modal button {
-        margin-top: 5px;
-        margin-bottom: 5px;
-        padding: 5px 10px;
-        border-radius: 10px;
-        font-family: "Radio Canada Big", sans-serif;
-        font-size: 20px;
-    }
-    .modal h1 {
-        font-size: 30px;
-        margin-top: 0;
-    }
-    .modal h1 {
-        font-size: 25px;
-    }
-    #gameInstructions ul {
-        padding: 0;
-        margin: 5px;
-    }
-    /* container to hold game letter tiles */
-#container {
+  .modal button {
+    margin: 20px;
+    font-size: 20px;
+  }
+  .modal h1 {
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .modal h1 {
+    font-size: 25px;
+  }
+  #gameInstructions ul {
+    padding: 0;
+    margin: 5px;
+  }
+  /* container to hold game letter tiles */
+  #container {
     padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 5%;
@@ -279,9 +274,9 @@ h1, h2, section {
     width: 80%;
     border: 5px solid black;
     border-radius: 10px;
-}
-/* tiles to container letters */
-.tile {
+  }
+  /* tiles to container letters */
+  .tile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,75 +288,78 @@ h1, h2, section {
     border: 2px solid black;
     border-radius: 5px;
     text-transform: capitalize;
-    font-weight: 500;   
-}
-#result .tile {
+    font-weight: 500;
+  }
+  #result .tile {
     width: 4.8vh;
     height: 7.2vh;
     font-size: 28px;
     margin: 5px;
-}
+  }
 }
 
 @media (max-width: 386px) {
-    #container {
-        width:200px;
-    }
-    h2 {
-        font-size: 16px;
-    }
-    br {
-        display: none;
-    }
+  #container {
+    width: 200px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  br {
+    display: none;
+  }
 }
 
-
 @media (min-width: 438px) and (max-width: 775px) {
-    #container {
-        width: 360px;
-    }
+  #container {
+    width: 360px;
+  }
 }
 
 @media (min-width: 455px) {
-    #startGame, #submitButton {
-        width: 350px;
-    }
-    #gameButtons {
-        justify-content: center;
-        display: grid;
-    }
+  #startGame,
+  #submitButton {
+    width: 350px;
+  }
+  #gameButtons {
+    justify-content: center;
+    display: grid;
+  }
 }
-
+@media (min-width: 1100px) {
+br {
+    display: none;
+  }
+}
 /*------------------ animations -------------------- */
 
 @keyframes neon {
-    from {
-      box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #b6ff00,
-        0 0 15px #b6ff00, 0 0 18px #b6ff00, 0 0 21px #b6ff00, 0 0 24px #b6ff00;
-    }
-    to {
-      box-shadow: 0 0 1.5px #fff, 0 0 3px #fff, 0 0 4.5px #fff, 0 0 6px #b6ff00,
-        0 0 7.5px #b6ff00, 0 0 9px #b6ff00, 0 0 10.5px #b6ff00, 0 0 12px #b6ff00;
-    }
+  from {
+    box-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #b6ff00,
+      0 0 15px #b6ff00, 0 0 18px #b6ff00, 0 0 21px #b6ff00, 0 0 24px #b6ff00;
   }
-
-  @keyframes neonText {
-    from {
-      text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #b6ff00,
-        0 0 15px #b6ff00, 0 0 18px #b6ff00, 0 0 21px #b6ff00, 0 0 24px #b6ff00;
-    }
-    to {
-      text-shadow: 0 0 1.5px #fff, 0 0 3px #fff, 0 0 4.5px #fff, 0 0 6px #b6ff00,
-        0 0 7.5px #b6ff00, 0 0 9px #b6ff00, 0 0 10.5px #b6ff00, 0 0 12px #b6ff00;
-    }
+  to {
+    box-shadow: 0 0 1.5px #fff, 0 0 3px #fff, 0 0 4.5px #fff, 0 0 6px #b6ff00,
+      0 0 7.5px #b6ff00, 0 0 9px #b6ff00, 0 0 10.5px #b6ff00, 0 0 12px #b6ff00;
   }
+}
 
-
-  @keyframes createBox {
-    from {
-      transform: scale(0);
-    }
-    to {
-      transform: scale(1);
-    }
+@keyframes neonText {
+  from {
+    text-shadow: 0 0 3px #fff, 0 0 6px #fff, 0 0 9px #fff, 0 0 12px #b6ff00,
+      0 0 15px #b6ff00, 0 0 18px #b6ff00, 0 0 21px #b6ff00, 0 0 24px #b6ff00;
   }
+  to {
+    text-shadow: 0 0 1.5px #fff, 0 0 3px #fff, 0 0 4.5px #fff, 0 0 6px #b6ff00,
+      0 0 7.5px #b6ff00, 0 0 9px #b6ff00, 0 0 10.5px #b6ff00, 0 0 12px #b6ff00;
+  }
+}
+
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}

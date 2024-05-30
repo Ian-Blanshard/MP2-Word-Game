@@ -98,6 +98,10 @@ https://css-tricks.com/getting-deep-into-shadows/
 
 https://www.noisetexturegenerator.com/
 
+https://developer.chrome.com/blog/mutation-events-deprecation/
+https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+
+
 ## Testing  <a name="testing"></a>
 s
 ### Bugs <a name="bugs"></a>
