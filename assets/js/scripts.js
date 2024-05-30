@@ -204,7 +204,7 @@ function notAWord() {
   const correctWordModalDiv = document.getElementById("notAWordResult");
   //enter the result text into the div
   correctWordModalDiv.innerHTML = `<h1>Unlucky!</h1>
-                                     <div>The word you entered did not score, as it does not exist in the english dictionary</div>`;
+                                     <div>The word you entered did not score, as it does not exist in the English dictionary</div>`;
   //assign the notAWord div to modalClass variable
   const modalClass = document.getElementById("notAWord");
   //add the is-visible CSS rules to make the modal visible
