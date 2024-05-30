@@ -201,7 +201,7 @@ h1, h2, section {
 #score {
     color: white;
 }
-#isAWord h1 {
+#isAWord h1, i {
     font-size: 50px;
     animation: createBox 1s;
 }
