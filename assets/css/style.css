@@ -342,6 +342,15 @@ br {
     display: none;
   }
 }
+@media (max-width: 310px) {
+    #gameInstructions h2 {
+        display: none;
+    }
+    #introduction {
+        display: none;
+    }
+}
+
 /*------------------ animations -------------------- */
 
 @keyframes neon {
