@@ -30,6 +30,14 @@ const timerDisplaySpan = document.getElementById("countDownTimer");
 timerDisplaySpan.addEventListener("DOMSubtreeModified", function () {
   if (timerDisplaySpan.textContent == "0") {
     PlayerSubmitAnswer();
+    resetPlayerAnswer();
+    clearInterval(countSecond);
+  //reset timer variable
+  timerSeconds = 30;
+  const tiles = document.querySelectorAll(".tile");
+  tiles.forEach((tile) => {
+    tile.innerHTML = "";
+  });
   }
 });
 

@@ -1,11 +1,13 @@
 # MP2-Word-Game
 
-Brief introduction
+![Screenshot of game on different devices]()
+
+Word Game is a fun game to practice your English language skills, similair in concept to the popular letters game from Countdown.
+
+This website is designed to challenge yourself to show off your quick thinking and see how high you can score! 
 
 Live version of site hosted on GitPages [here]()
 
-![Screenshot of game on different devices]()
----
 ## Contents
 
 1 [User Experience (UX)](#UX)
