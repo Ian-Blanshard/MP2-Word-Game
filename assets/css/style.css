@@ -34,7 +34,8 @@ section {
   padding-bottom: 1%;
   background-color: black;
   color: black;
-  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00, 1px 1px 0 #b6ff00;
+  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
+    1px 1px 0 #b6ff00;
   border: 2px solid #b6ff00;
   box-shadow: 2.5px 2.5px 24px #b6ff00;
   border-radius: 10px;
@@ -192,8 +193,8 @@ section {
   font-size: 50px;
   margin-top: 0;
   color: black;
-  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00, 1px 1px 0 #b6ff00;
-  
+  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
+    1px 1px 0 #b6ff00;
 }
 /* styles for the list of instructions */
 #gameInstructions ul {
@@ -203,7 +204,8 @@ section {
   font-size: 35px;
   margin-top: 20px;
   color: black;
-  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00, 1px 1px 0 #b6ff00;
+  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
+    1px 1px 0 #b6ff00;
 }
 /*-------------------- is a word modal styles -------------------------------- */
 
@@ -211,15 +213,16 @@ section {
   font-size: 50px;
   animation: createBox 1s;
   color: black;
-  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00, 1px 1px 0 #b6ff00;
+  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
+    1px 1px 0 #b6ff00;
 }
 #isAWord i {
   font-size: 50px;
   animation: createBox 1s;
   color: #b6ff00;
-  
 }
-#word, #score {
+#word,
+#score {
   color: #b6ff00;
 }
 #isAWord div {
@@ -238,7 +241,8 @@ section {
   font-size: 50px;
   animation: createBox 1s;
   color: black;
-  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00, 1px 1px 0 #b6ff00;
+  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
+    1px 1px 0 #b6ff00;
 }
 #notAWord div {
   font-size: 35px;
@@ -261,11 +265,9 @@ section {
     margin: 20px;
     font-size: 20px;
   }
+
   .modal h1 {
-    font-size: 30px;
     margin-top: 0;
-  }
-  .modal h1 {
     font-size: 25px;
   }
   #gameInstructions ul {
@@ -288,18 +290,10 @@ section {
   }
   /* tiles to container letters */
   .tile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 6vh;
     height: 9vh;
-    background-color: rgb(171, 169, 115);
     margin: 4px;
     font-size: 35px;
-    border: 2px solid black;
-    border-radius: 5px;
-    text-transform: capitalize;
-    font-weight: 500;
   }
   #result .tile {
     width: 4.8vh;
@@ -338,17 +332,38 @@ section {
   }
 }
 @media (min-width: 1100px) {
-br {
+  br {
     display: none;
   }
 }
+
 @media (max-width: 359px) {
-    #gameInstructions h2 {
-        display: none;
-    }
-    #introduction {
-        display: none;
-    }
+  #gameInstructions h2 {
+    display: none;
+  }
+  #introduction {
+    display: none;
+  }
+  #gameTitle h1 {
+    font-size: 30px;
+  }
+  #isAWord div,
+  #notAWord div {
+    font-size: 15px;
+  }
+  #isAWord h1 {
+    font-size: 25px;
+  }
+  .tile {
+    width: 4vh;
+    height: 6vh;
+    font-size: 16px;
+  }
+  #result .tile {
+    width: 3.2vh;
+    height: 4.8vh;
+    font-size: 13px;
+  }
 }
 
 /*------------------ animations -------------------- */
