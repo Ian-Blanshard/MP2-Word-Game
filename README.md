@@ -38,6 +38,8 @@ Live version of site hosted on GitPages [here]()
 
 7 [Finished Site](#finished-site)
 
+***
+
 ## User Experience (UX) <a name="UX"></a>
 ### Project Goals <a name="project-goals"></a>
 
