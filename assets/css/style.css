@@ -3,7 +3,7 @@
 
 /* body of the page */
 body {
-  background-image: url(../assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
+  background-image: url(https://ian-blanshard.github.io/MP2-Word-Game/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
   margin: 0;
   font-family: "Radio Canada Big", sans-serif;
 }
@@ -162,7 +162,7 @@ section {
   text-align: center;
   justify-content: center;
   padding: 1rem;
-  background-image: url(../assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
+  background-image: url(https://ian-blanshard.github.io/MP2-Word-Game/assets/images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
   cursor: pointer;
   visibility: hidden;
   border: 15px solid black;
