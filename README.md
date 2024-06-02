@@ -40,10 +40,20 @@ Live version of site hosted on GitPages [here](https://ian-blanshard.github.io/M
 
   * [Bugs](#bugs)
   * [Code Validation](#code-validation)
+    * [CSS code validation](#css-code-validation)
+    * [HTML code validation](#html-code-validation)
+    * [JavaScript code validation](#javascript-code-validation)
   * [Lighthouse Testing](#lighthouse-testing)
   * [Manual Testing](#manual-testing)
+    * [Testing across different devices and browsers](#testing-across-different-devices-and-browsers)
+    * [Testing game features](#testing-game-features)
+    * [Testing Introduction Modal](#testing-introduction-modal)
+    * [Testing Game Screen](#testing-game-screen)
+    * [Testing Is A Word Modal](#testing-is-a-word-modal)
+    * [Testing not a word modal](#testing-not-a-word-modal)
+    * [Testing too short word modal](#testing-too-short-modal)
   * [Testing Stories](#testing-stories)
-  * [Device and Browser Testing](#testing-devices-browsers)
+  
 
 6 [Deployment](#deployment)
 
@@ -59,7 +69,9 @@ Live version of site hosted on GitPages [here](https://ian-blanshard.github.io/M
  * a method of scoring and tracking high score to add replayability
  * Responsive design so can be played accross different devices
  * Clear instructions to player of how to play the game
- 
+
+***
+
 ### User stories <a name="user-stories"></a>
 
 A user of the site wants to:
@@ -76,6 +88,8 @@ A user of the site wants to:
 
 * Be able to play the game on different devices
 
+***
+
 ### Wireframes <a name="wireframes"></a>
 
 [Figma](www.figma.com) was used to create wireframes for the project to get some of the ideas for layouts prior to starting to code them.
@@ -87,6 +101,8 @@ The initial design for the game, the tiles and the various components which are 
 ![Screenshot of wireframes](/assets/images/wireframe-2.jpg)
 
 The wireframes for each different device layouts in the initial design stages. These layouts were used to begin with but during the initial stages of coding the functionality of the game, and with feedback from my mentor Marcel, I realised the screen was too cluttered, Especially on mobile. This led to the current design being used in which instructions and results are displayed using modals. This creates a much more user friendly experience with a cleaner game screen.
+
+***
 
 ### Colour Scheme and Font <a name="styles"></a>
 
@@ -103,6 +119,8 @@ The color scheme used is a black background (#000000), with a bright green (#B6F
 ![Screenshot of color scheme](/assets/images/colour-scheme.jpg)
 
 The large black background had some visual noise texture added to it to break up the large block of colour, this was created using [noise texture generator](https://www.noisetexturegenerator.com/)
+
+***
 
 ## Features <a name="features"></a>
 
@@ -179,6 +197,7 @@ The word too short modal appears when a player enters a word which is less than 
 ### title of feature <a name=""></a>
 ![]()
 
+***
 
 ## Technologies used <a name="technologies-used"></a>
 
@@ -193,6 +212,8 @@ This Project uses the following languages:
 [FontAwesome](https://fontawesome.com/) was used for the stars on the correct word modals.
 
 [Git](https://git-scm.com/) and [GitHub](https://github.com/) for version control and as a repository.
+
+***
 
 ## Credits <a name="credits"></a>
 The [CSS documentation at mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS) was used as a reference point during the creation of the website and when creating shadow effects.
@@ -212,14 +233,22 @@ The large black background had some visual noise texture added to it to break up
 
 When I discovered the DOMSubtreeModified event listener need to be replaced I used [this site](https://developer.chrome.com/blog/mutation-events-deprecation/) and [this site](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to learn about mutation events.
 
+***
+
 ## Testing  <a name="testing"></a>
-s
+
 ### Bugs <a name="bugs"></a>
 
 #### Bug fix
-game timer ran twice as fast second time as previous interval timer was still running
 
-could submit word multiple times
+Experienced a bug where the timer for any games after the first would countdown quicker than every second, this was due to the previous countdowns still being ongoing, restructed the function and moved the timer variable to the global scope to allow it to be cancelled.
+
+***
+
+Experienced a bug which allowed you to return to the game screen after submitting a word and then resubmit the word again before a new game was started. Cleared player word array when closing modals to fix.
+
+***
+
 ### Code Validation <a name="code-validation"></a>
 
 #### CSS code validation <a name="css-code-validation"></a>
@@ -229,6 +258,9 @@ I used the [W3C Markup validation service](https://jigsaw.w3.org/css-validator/#
 This passed with no errors found.
 
 ![Screenshot of CSS validation](/assets/images/css-validation.jpg)
+
+***
+
 #### HTML code validation <a name="HTML-code-validation"></a>
 
 I used the [W3C Markup validation service](https://validator.w3.org/) to check the validity of my HTML.
@@ -246,6 +278,8 @@ Following these amendments to my code it passed validation.
 
 ![Screen shot of HTML validation after](/assets/images/html-validation-after.jpg)
 
+***
+
 #### JavaScript code validation <a name="javascript-code-validation"></a>
 
 I used the [JS hint JavaScript validation service](https://jshint.com/) to check the validity of my JavaScript. 
@@ -254,34 +288,118 @@ This passed with no errors found.
 
 ![Screenshot of JavaScript code validation](/assets/images/javascript-validation.jpg)
 
+***
 
 ### Lighthouse testing <a name="lighthouse-testing"></a>
 
+Initial lighthouse testing showed good accessibility and performance scores.
+
+![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score.jpg)
+
+Best practices scored poorly due to using DOMsubtreemodified in an event listener.
+
+![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score1.jpg)
+
+SEO scored poorly due to no meta description.
+
+![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score2.jpg)
+
+***
+
 ### Manual testing <a name="manual-testing"></a>
-   
+
 #### Testing across different devices and browsers  <a name="testing-devices-browsers"></a>
 
 Browser | Outcome | Pass/Fail  
+--- | --- | ---
+Google Chrome | Game ran correctly, design appearance correct and responsive across different screen sizes | Pass
+Microsoft Edge | Game ran correctly, design appearance correct and responsive across different screen sizes | Pass
+Mozilla Firefox | Game ran correctly, design appearance correct and responsive across different screen sizes | Pass
+Apple Safari | Game ran correctly, design appearance correct - tested only on mobile screen size (iphone 12) | Pass
 
+***
 
-* Common Elements Testing
+#### Testing game features  <a name="testing-game-features"></a>
 
-- General
+#### Testing Introduction Modal  <a name='testing-introduction-modal'></a>
 
-    Feature | Outcome | Pass/Fail
-    --- | --- | ---
+Feature | Outcome | Pass/Fail
+ --- | --- | ---
+Modal displays | Modal should display upon new page loading | Pass
+Modal closes | Modal should close and display the game screen when the player clicks the I'm ready to play button | Pass
+Title | Title should be visible and legible | Pass
+Introduction | Introduction should be visible and legible | Pass
+Instruction Title | Instruction title should be visible and legible | Pass
+Instructions | Instructions should be visible and legible | Pass
 
+***
 
-#### Tested X
+#### Testing Game Screen <a name='testing-game-screen'></a>
 
- * 
- * 
- * 
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Title | Title should be visible and legible | Pass
+Highscore | Highscore should be visible and legible, should read 0 upon page load, and update upon player scoring a higher score than its current value | Pass
+Timer | Timer should be visible and legible, should read 30 unless a current game is on going, when the start game button is pressed it should count down 1 second at a time to 0 | Pass
+Player out of time | When the timer reaches 0 during a players game the contents of players answer are automatically submitted | Pass
+Game tiles | Game tiles should be visible and legible and contain no letters upon screen loading | Pass
+Generate game letters | When the start game button is pressed 12 random letters should fill the game tiles, they should contain 4 vowels which are evenly distributed across the tiles, the letters should be legible | Pass
+Add letters to player word | On clicking one of the game letters during an active game a tile is generated in the players word containing the clicked letter | Pass
+Remove letter from player word | On clicking one of the letters in the players word the tile is removed | Pass
+Start game button | If the start game button is pressed a new game is started | Pass 
+Submit word button | During an active game if the submit word button is pressed the word is submitted as the player answer | Pass
+Player correct answer | If a player submits a word which is at least 3 letters long and in the English Dictionary the is a word modal is displayed | Pass
+Player incorrect answer | If a player submits a word which is at least 3 letters long but is not in the English dictionary the not a word modal is displayed | Pass
+Player answer too short | If a player submits a word which is 2 letters or less the too short modal is displayed | Pass
 
- <br>
+***
+
+#### Testing Is A Word Modal <a name='testing-is-a-word-modal'></a>
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Modal displays | Modal should display when player clicks submit word button and player word array contains a word at east three letters wrong in the English language | Pass
+Three star result | If player score is > 100 points when modal is displayed three stars are shown on modal | Pass
+Two star result | If player score is between 50 and 100 points when modal is displayed to stars are shown on modal | Pass
+One star result | If player score is 0-50 points when modal is displayed one star is shown on modal | Pass
+Player word displayed | The word the player entered is displayed on the modal | Pass
+Player score displayed | The score the word the player entered is displayed on the modal | Pass
+modal text | All text is displayed and is legible | Pass
+Let's play again button | Button is displayed on modal, text is visible and clicking it returns player to game screen | Pass
+
+***
+
+#### Testing Not A Word Modal <a name='testing-not-a-word-modal'></a>
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Modal displays | Modal should display when player clicks submit word button and the player word array contains greater than 2 letters but is not a word in the English language | Pass
+modal text | All text is displayed and is legible | Pass
+Try again button | Button is displayed on modal, text is visible and clicking it returns player to game screen | Pass
+
+***
+
+#### Testing Too Short Modal <a name='testing-too-short-modal'></a>
+
+Feature | Outcome | Pass/Fail
+--- | --- | ---
+Modal displays | Modal should display when player clicks submit word button and the player word array contains 2 or less letters | Pass
+modal text | All text is displayed and is legible | Pass
+Keep playing button | Button is displayed on modal, text is visible and clicking it returns player to game screen | Pass
+
 
 ### Testing user stories  <a name="testing-stories"></a>
 
+User Requirement  | Satisfying Features
+--- | --- 
+To understand how to play the game | Introduction modal gives clear instructions upon loading page, Player interactive features contain consistent animation style
+To receive feedback on performance | Game score, High score, different number of stars on correct word modal, not a word modal.
+Have spelling checked | If spelling is incorrect not a word modal tells player the word does not feature in the English dictionary
+Be able to see their previous score and try to beat it | High score is tracked and displayed on game screen
+Play a game which is simple accessible and intuiative to play | High accessiblity score on lighthouse testing, legible font, contrasting colours, consistent design accross features.
+Be able to play the game on different devices | Responsive design
+
+***
 
 ## Deployment <a name="deployment"></a>
 
@@ -303,9 +421,6 @@ Detailed instructions on how to create a site on GitHub pages can be found [here
 
 ## Finished site  <a name="finished-site"></a>
 
-###  <a name=""></a>
-
-![screenshot]()
 
 
 
