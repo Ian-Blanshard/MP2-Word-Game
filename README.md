@@ -2,7 +2,7 @@
 
 ![Screenshot of game on different devices](/assets/images/word-game-2.jpg)
 
-Word Game is a fun game to practice your English language skills, similair in concept to the popular letters game from Countdown.
+Word Game is a fun game to practice your English language skills, similar in concept to the popular letters game from Countdown.
 
 This website is designed to challenge yourself to show off your quick thinking and see how high you can score! 
 
@@ -66,8 +66,8 @@ Live version of site hosted on GitPages [here](https://ian-blanshard.github.io/M
 
  * Create a word based puzzle game which is fun to play
  * The game to have a timer to increase the challenge  
- * a method of scoring and tracking high score to add replayability
- * Responsive design so can be played accross different devices
+ * a method of scoring and tracking high score to add replay ability
+ * Responsive design so can be played across different devices
  * Clear instructions to player of how to play the game
 
 ***
@@ -106,7 +106,7 @@ The wireframes for each different device layouts in the initial design stages. T
 
 ### Colour Scheme and Font <a name="styles"></a>
 
-The font Radio Canada Big from [Google fonts](https://fonts.google.com/) is used for the site, for the game to work properly it is essential a clear font is used, for this reasons a sans serif font stlye was chosen. The font sans serif was also used as the fallback incase Radio Canada Big could not be loaded to ensure the game was still playable.
+The font Radio Canada Big from [Google fonts](https://fonts.google.com/) is used for the site, for the game to work properly it is essential a clear font is used, for this reasons a sans serif font stlye was chosen. The font sans serif was also used as the fallback in case Radio Canada Big could not be loaded to ensure the game was still playable.
 
 ![Screenshot of font](/assets/images/font.jpg)
 
@@ -114,7 +114,7 @@ The weight of the font is varied for different features of the game, with 500 we
 
 ![Screenshot of font weights-](/assets/images/font-weights.jpg)
 
-The color scheme used is a black background (#000000), with a bright green (#B6FF00) colour used for text, margins and shadows. This provides a good contrast so that the text and interactable features are easily visible and score well for accesibility. A less bright green (#ABA973) was used for the background of the game tiles and buttons, because these features are larger block of colour this ensures they weren't too harsh on the eyes.
+The color scheme used is a black background (#000000), with a bright green (#B6FF00) colour used for text, margins and shadows. This provides a good contrast so that the text and interactable features are easily visible and score well for accessibility. A less bright green (#ABA973) was used for the background of the game tiles and buttons, because these features are larger block of colour this ensures they weren't too harsh on the eyes.
 
 ![Screenshot of color scheme](/assets/images/colour-scheme.jpg)
 
@@ -126,7 +126,7 @@ The large black background had some visual noise texture added to it to break up
 
 ### Introduction modal <a name="introduction-modal"></a>
 
-The introducton modal is visible upon the page loading, it provides the user with the name of the game, a short introduction of the game, rules and clear instructions on how to play it.
+The introduction modal is visible upon the page loading, it provides the user with the name of the game, a short introduction of the game, rules and clear instructions on how to play it.
 
 ![Screenshot of instructions modal](/assets/images/instruction-modal.jpg)
 
@@ -138,13 +138,13 @@ The game screen is where the game is played, it contains all the required featur
 
 ### Game tiles grid <a name="game-tiles-grid"></a>
 
-The game tiles grid is the section on the game screen which contains the tiles of letters which the user picks from to make thier word, the tiles are blank prior to the game beginning and upon the player starting the game they fill with letters. The tiles have an animation added to them to communicate to the player that they are interactive features and can be clicked.
+The game tiles grid is the section on the game screen which contains the tiles of letters which the user picks from to make their word, the tiles are blank prior to the game beginning and upon the player starting the game they fill with letters. The tiles have an animation added to them to communicate to the player that they are interactive features and can be clicked.
 
 ![Screenshot of game tiles](/assets/images/game-tiles.jpg)
 
 ### Players word box <a name="players-word-box"></a>
 
-The players word box is the place which the game tiles, of which they have selected will be places. The players word box is empty at the start of each game and once a tile has been added it has the same animation as the game tiles, this shows the player that they are also intereactive game parts and if the player clicks on a tile they have added to thier answer it can be removed, in case they have made an error.
+The players word box is the place which the game tiles, of which they have selected will be places. The players word box is empty at the start of each game and once a tile has been added it has the same animation as the game tiles, this shows the player that they are also interactive game parts and if the player clicks on a tile they have added to their answer it can be removed, in case they have made an error.
 
 ![Screenshot of players word box](/assets/images/player-word-box.jpg)
 
@@ -156,7 +156,7 @@ The game buttons are the two buttons which can be clicked by the player to contr
 
 ### Game title <a name="game-title"></a>
 
-The game title is the header of the pages and shows the logo for the game, it is there as a visual reminder to the player of the game what game they are playing.
+The game title is at the head of the pages and shows the logo for the game, it is there as a visual reminder to the player of the game what game they are playing.
 
 ![Screenshot of game title](/assets/images/game-title.jpg)
 
@@ -168,8 +168,8 @@ The scoreboard holds two pieces of information which are updated as the player i
 
 ### Correct word modals <a name="correct-word-modals"></a>
 
-The correct word modals are displayed after the player succesfully submits a word during the game, a variety of modals exist, each displaying the word they entered and the score it received, this is calculated by the length of the word and the time in which it took them to create it. When the player scores a different rating of stars are achieved, the higher the score the more stars. This star rating enhances the replayability as players strive to achieve a higher rating.
-The modal contains a let's play again button the allow the player to close the modal and play another game. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
+The correct word modals are displayed after the player successfully submits a word during the game, a variety of modals exist, each displaying the word they entered and the score it received, this is calculated by the length of the word and the time in which it took them to create it. When the player scores a different rating of stars are achieved, the higher the score the more stars. This star rating enhances the replayability as players strive to achieve a higher rating.
+The modal contains a let's play again button to the allow the player to close the modal and play another game. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
 
 One star modal
 
@@ -241,7 +241,7 @@ When I discovered the DOMSubtreeModified event listener need to be replaced I us
 
 #### Bug fix
 
-Experienced a bug where the timer for any games after the first would countdown quicker than every second, this was due to the previous countdowns still being ongoing, restructed the function and moved the timer variable to the global scope to allow it to be cancelled.
+Experienced a bug where the timer for any games after the first would countdown quicker than every second, this was due to the previous countdowns still being ongoing, restructured the function and moved the timer variable to the global scope to allow it to be cancelled.
 
 ***
 
@@ -268,11 +268,11 @@ This highlighted a number of errors and warnings.
 
 The structure of my unordered list wasn't correct, so the elements were renamed.
 
-![Sreenshot of HTML validation](/assets/images/html-validation.jpg)
+![Screenshot of HTML validation](/assets/images/html-validation.jpg)
 
-A stray i element was removed and the JavaScript script needed moveing just inside the body not below it.
+A stray i element was removed and the JavaScript script needed moving just inside the body not below it.
 
-![Sreenshot of HTML validation](/assets/images/html-validation1.jpg)
+![Screenshot of HTML validation](/assets/images/html-validation1.jpg)
 
 Following these amendments to my code it passed validation.
 
@@ -296,10 +296,6 @@ Initial lighthouse testing showed good accessibility and performance scores.
 
 ![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score.jpg)
 
-Best practices scored poorly due to using DOMsubtreemodified in an event listener.
-
-![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score1.jpg)
-
 SEO scored poorly due to no meta description.
 
 ![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score2.jpg)
@@ -307,6 +303,15 @@ SEO scored poorly due to no meta description.
 a meta description was added to my HTML this improved this issue.
 
 ![Screenshot of lighthouse testing after](/assets/images/lighthouse-SEO-fixed.jpg)
+
+Best practices scored poorly due to using DOMsubtreemodified in an event listener.
+
+![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score1.jpg)
+
+This lead me to having to remove the old eventlistener containing DOMSubtreeModified and replacing this with a
+ mutationObserver, this resolved this issue and the final lighthouse score was satisfactory.
+
+![Screenshot of final lighthouse score](/assets/images/lighthouse-final.jpg)
 
 ***
 
@@ -400,7 +405,7 @@ To understand how to play the game | Introduction modal gives clear instructions
 To receive feedback on performance | Game score, High score, different number of stars on correct word modal, not a word modal.
 Have spelling checked | If spelling is incorrect not a word modal tells player the word does not feature in the English dictionary
 Be able to see their previous score and try to beat it | High score is tracked and displayed on game screen
-Play a game which is simple accessible and intuiative to play | High accessiblity score on lighthouse testing, legible font, contrasting colours, consistent design accross features.
+Play a game which is simple accessible and intuitive to play | High accessibility score on lighthouse testing, legible font, contrasting colours, consistent design accross features.
 Be able to play the game on different devices | Responsive design
 
 ***
@@ -414,12 +419,12 @@ The final Live version of site is hosted on GitPages [here]()
 
 This is achieved by:
 
- 1. logging into GitHub
- 2. navigating to the repository you would like to create a site for
- 3. at the top of the repository clicking the settings icon
- 4. on the left hand side of the settings page click the pages section
- 5. under source click the dropdown and select master branch
- 6. once the page refreshes there will be a link to your site, click this
+ 1. Logging into GitHub
+ 2. Navigating to the repository you would like to create a site for
+ 3. At the top of the repository clicking the settings icon
+ 4. On the left hand side of the settings page click the pages section
+ 5. Under source click the dropdown and select master branch
+ 6. Once the page refreshes there will be a link to your site, click this
 
 Detailed instructions on how to create a site on GitHub pages can be found [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
