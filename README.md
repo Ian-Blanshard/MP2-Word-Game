@@ -188,25 +188,29 @@ This Project uses the following languages:
 * CSS
 * JavaScript
 
+[Google Fonts](https://fonts.google.com/) was used to browse, select and as a source of the font I used on this site.
+
+[FontAwesome](https://fontawesome.com/) was used for the stars on the correct word modals.
+
+[Git](https://git-scm.com/) and [GitHub](https://github.com/) for version control and as a repository.
+
 ## Credits <a name="credits"></a>
+The [CSS documentation at mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS) was used as a reference point during the creation of the website and when creating shadow effects.
 
-for learning about setInterval() and setTimeout() in creating the timer element
-https://www.elated.com/javascript-timers-with-settimeout-and-setinterval/
+When creating my README I used the website [makeareadme.com](https://www.makeareadme.com/) and the following [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) from GitHub to assist.
 
-for learning to create modal 
-https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t
+When creating the timer for the game in JavaScript is used [this blog on elated.com](https://www.elated.com/javascript-timers-with-settimeout-and-setinterval/) for learning about setInterval() and setTimeout().
 
-for learning to shuffle an array
-https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj
+When creating the modals for the game I used [this site](https://webdesign.tutsplus.com/how-to-build-flexible-modal-dialogs-with-html-css-and-javascript--cms-33500t) for learning to create modals .
 
-using shadows for boxes and letters
-https://css-tricks.com/getting-deep-into-shadows/
 
-https://www.noisetexturegenerator.com/
+When learning how to truly randomise my array of letters I used [this site](https://dev.to/codebubb/how-to-shuffle-an-array-in-javascript-2ikj) to learn about the Fisher-Yates shuffle.
 
-https://developer.chrome.com/blog/mutation-events-deprecation/
-https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver
+For learning how to animate shadows i used [this site](https://css-tricks.com/getting-deep-into-shadows/).
 
+The large black background had some visual noise texture added to it to break up the large block of colour, this was created using [noise texture generator](https://www.noisetexturegenerator.com/)
+
+When I discovered the DOMSubtreeModified event listener need to be replaced I used [this site](https://developer.chrome.com/blog/mutation-events-deprecation/) and [this site](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to learn about mutation events.
 
 ## Testing  <a name="testing"></a>
 s
@@ -231,6 +235,7 @@ could submit word multiple times
 #### Testing across different devices and browsers  <a name="testing-devices-browsers"></a>
 
 Browser | Outcome | Pass/Fail  
+
 
 * Common Elements Testing
 
