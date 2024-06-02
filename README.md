@@ -304,6 +304,10 @@ SEO scored poorly due to no meta description.
 
 ![Screenshot of lighthouse testing before](/assets/images/lighthouse-initial-score2.jpg)
 
+a meta description was added to my HTML this improved this issue.
+
+![Screenshot of lighthouse testing after](/assets/images/lighthouse-SEO-fixed.jpg)
+
 ***
 
 ### Manual testing <a name="manual-testing"></a>
