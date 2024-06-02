@@ -8,6 +8,8 @@ This website is designed to challenge yourself to show off your quick thinking a
 
 Live version of site hosted on GitPages [here](https://ian-blanshard.github.io/MP2-Word-Game/)
 
+***
+
 ## Contents
 
 1 [User Experience (UX)](#UX)
@@ -19,7 +21,16 @@ Live version of site hosted on GitPages [here](https://ian-blanshard.github.io/M
 
 2 [Features](#features)
 
-  * [x](#x)
+  * [Introduction Modal](#introduction-modal)
+  * [Game Screen](#game-screen)
+  * [Game Tiles](#game-tiles-grid)
+  * [Players Word Box](#players-word-box)
+  * [Game Buttons](#game-buttons)
+  * [Game Title](#game-title)
+  * [Scoreboard](#scoreboard)
+  * [Correct Word Modal](#correct-word-modals)
+  * [Not A Word Modal](#not-a-word-modal)
+  * [Word Too Short Modal](#word-too-short-modal)
  
 3 [Technologies Used](#technologies-used)
 
@@ -53,7 +64,7 @@ Live version of site hosted on GitPages [here](https://ian-blanshard.github.io/M
 
 A user of the site wants to:
 
-*  Understand how to play the game
+* Understand how to play the game
 
 * Receive feedback on their performance
 
@@ -66,6 +77,7 @@ A user of the site wants to:
 * Be able to play the game on different devices
 
 ### Wireframes <a name="wireframes"></a>
+
 [Figma](www.figma.com) was used to create wireframes for the project to get some of the ideas for layouts prior to starting to code them.
 
 ![Screenshot of wireframes](/assets/images/wireframe-1.jpg)
@@ -77,6 +89,7 @@ The initial design for the game, the tiles and the various components which are 
 The wireframes for each different device layouts in the initial design stages. These layouts were used to begin with but during the initial stages of coding the functionality of the game, and with feedback from my mentor Marcel, I realised the screen was too cluttered, Especially on mobile. This led to the current design being used in which instructions and results are displayed using modals. This creates a much more user friendly experience with a cleaner game screen.
 
 ### Colour Scheme and Font <a name="styles"></a>
+
 The font Radio Canada Big from [Google fonts](https://fonts.google.com/) is used for the site, for the game to work properly it is essential a clear font is used, for this reasons a sans serif font stlye was chosen. The font sans serif was also used as the fallback incase Radio Canada Big could not be loaded to ensure the game was still playable.
 
 ![Screenshot of font](/assets/images/font.jpg)
@@ -94,27 +107,75 @@ The large black background had some visual noise texture added to it to break up
 ## Features <a name="features"></a>
 
 ### Introduction modal <a name="introduction-modal"></a>
-![](/assets/images/instruction-modal.jpg)
+
+The introducton modal is visible upon the page loading, it provides the user with the name of the game, a short introduction of the game, rules and clear instructions on how to play it.
+
+![Screenshot of instructions modal](/assets/images/instruction-modal.jpg)
+
 ### Game screen <a name="game-screen"></a>
-![](/assets/images/game-screen.jpg)
+
+The game screen is where the game is played, it contains all the required features to play the game, all visible at once and presented in easy to access parts of the screen for players playing one handed on mobile.
+
+![Screenshot of game screen](/assets/images/game-screen.jpg)
+
 ### Game tiles grid <a name="game-tiles-grid"></a>
-![](/assets/images/game-tiles.jpg)
+
+The game tiles grid is the section on the game screen which contains the tiles of letters which the user picks from to make thier word, the tiles are blank prior to the game beginning and upon the player starting the game they fill with letters. The tiles have an animation added to them to communicate to the player that they are interactive features and can be clicked.
+
+![Screenshot of game tiles](/assets/images/game-tiles.jpg)
+
 ### Players word box <a name="players-word-box"></a>
-![](/assets/images/player-word-box.jpg)
+
+The players word box is the place which the game tiles, of which they have selected will be places. The players word box is empty at the start of each game and once a tile has been added it has the same animation as the game tiles, this shows the player that they are also intereactive game parts and if the player clicks on a tile they have added to thier answer it can be removed, in case they have made an error.
+
+![Screenshot of players word box](/assets/images/player-word-box.jpg)
+
 ### Game buttons <a name="game-buttons"></a>
-![](/assets/images/game-buttons.jpg)
+
+The game buttons are the two buttons which can be clicked by the player to control the flow of the game, the start game button to start a new game and the submit word button to use when they have finished their word. Both of the buttons have an animation on them to communicate to the player that they are interactive elements.
+
+![Screenshot of game buttons](/assets/images/game-buttons.jpg)
+
 ### Game title <a name="game-title"></a>
-![](/assets/images/game-title.jpg)
+
+The game title is the header of the pages and shows the logo for the game, it is there as a visual reminder to the player of the game what game they are playing.
+
+![Screenshot of game title](/assets/images/game-title.jpg)
+
 ### Scoreboard <a name="scoreboard"></a>
-![](/assets/images/scoreboard.jpg)
+
+The scoreboard holds two pieces of information which are updated as the player is playing, the timer which countdowns the time in which they have to complete the game, this adds challenge for the player. The high score is also visible in the scoreboard which displays the players highest score from the current session, this adds engagement as the player attempts to beat any previous scores they have.
+
+![Screenshot of scoreboard](/assets/images/scoreboard.jpg)
+
 ### Correct word modals <a name="correct-word-modals"></a>
-![](/assets/images/one-star-modal.jpg)
-![](/assets/images/correct-word-modal.jpg)
-![](/assets/images/three-star-modal.jpg)
+
+The correct word modals are displayed after the player succesfully submits a word during the game, a variety of modals exist, each displaying the word they entered and the score it received, this is calculated by the length of the word and the time in which it took them to create it. When the player scores a different rating of stars are achieved, the higher the score the more stars. This star rating enhances the replayability as players strive to achieve a higher rating.
+The modal contains a let's play again button the allow the player to close the modal and play another game. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
+
+One star modal
+
+![Screenshot of one star modal](/assets/images/one-star-modal.jpg)
+
+two star modal
+
+![Screenshot of two star model](/assets/images/correct-word-modal.jpg)
+
+three star modal
+
+![Screenshot of three star modal](/assets/images/three-star-modal.jpg)
+
 ### Not a word modal <a name="not-a-word-modal"></a>
-![](/assets/images/not-a-word-modal.jpg)
+
+The not a word modal appears when the player enters a word which is not in the english dictionary. It communicates this with the player and provides them with a button which allows them to try again. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
+
+![Screenshot of not a word modal](/assets/images/not-a-word-modal.jpg)
+
 ### Word too short modal <a name="word-too-short-modal"></a>
-![](/assets/images/word-too-short-modal.jpg)
+
+The word too short modal appears when a player enters a word which is less than three letters wrong, this is against the rules of the game, this information is communicated to them. The modal contains a keep playing button which allows them to return to the game. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
+
+![Screenshot of word too short modal](/assets/images/word-too-short-modal.jpg)
 ### title of feature <a name=""></a>
 ![]()
 
@@ -161,7 +222,7 @@ could submit word multiple times
 #### HTML code validation <a name="HTML-code-validation"></a>
 ![html]()
 #### JavaScript code validation <a name="javascript-code-validation"></a>
-![javascript]()
+![javascript code validation before]()
 
 ### Lighthouse testing <a name="lighthouse-testing"></a>
 
