@@ -221,12 +221,39 @@ game timer ran twice as fast second time as previous interval timer was still ru
 
 could submit word multiple times
 ### Code Validation <a name="code-validation"></a>
+
 #### CSS code validation <a name="css-code-validation"></a>
-![css]()
+
+I used the [W3C Markup validation service](https://jigsaw.w3.org/css-validator/#validate_by_input) to check the validity of my CSS. 
+
+This passed with no errors found.
+
+![Screenshot of CSS validation](/assets/images/css-validation.jpg)
 #### HTML code validation <a name="HTML-code-validation"></a>
-![html]()
+
+I used the [W3C Markup validation service](https://validator.w3.org/) to check the validity of my HTML.
+This highlighted a number of errors and warnings.
+
+The structure of my unordered list wasn't correct, so the elements were renamed.
+
+![Sreenshot of HTML validation](/assets/images/html-validation.jpg)
+
+A stray i element was removed and the JavaScript script needed moveing just inside the body not below it.
+
+![Sreenshot of HTML validation](/assets/images/html-validation1.jpg)
+
+Following these amendments to my code it passed validation.
+
+![Screen shot of HTML validation after](/assets/images/html-validation-after.jpg)
+
 #### JavaScript code validation <a name="javascript-code-validation"></a>
-![javascript code validation before]()
+
+I used the [JS hint JavaScript validation service](https://jshint.com/) to check the validity of my JavaScript. 
+
+This passed with no errors found.
+
+![Screenshot of JavaScript code validation](/assets/images/javascript-validation.jpg)
+
 
 ### Lighthouse testing <a name="lighthouse-testing"></a>
 

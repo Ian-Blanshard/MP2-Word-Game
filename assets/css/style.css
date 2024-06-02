@@ -199,6 +199,7 @@ section {
 /* styles for the list of instructions */
 #gameInstructions ul {
   padding: 10px;
+  list-style-type: none;
 }
 #instructions h1 {
   font-size: 35px;
