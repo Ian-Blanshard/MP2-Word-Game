@@ -32,8 +32,8 @@ section {
   margin: 1%;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-color: black;
-  color: black;
+  background-color: #000000;
+  color: #000000;
   text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
     1px 1px 0 #b6ff00;
   border: 2px solid #b6ff00;
@@ -74,10 +74,10 @@ section {
   align-items: center;
   width: 6vh;
   height: 9vh;
-  background-color: rgb(171, 169, 115);
+  background-color: #ABA973;
   margin: 10px;
   font-size: 50px;
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 5px;
   text-transform: capitalize;
   font-weight: 500;
@@ -94,7 +94,7 @@ section {
   width: 90%;
   height: 14%;
   border-radius: 10px;
-  background-color: black;
+  background-color: #000000;
   border: 2px solid #b6ff00;
   box-shadow: 2.5px 2.5px 24px #b6ff00;
 }
@@ -131,10 +131,10 @@ section {
 /* h2 which act as buttons */
 #gameButtons h2 {
   margin: 2%;
-  background-color: rgb(171, 169, 115);
-  color: black;
+  background-color: #ABA973;
+  color: #000000;
   animation: neon 1.5s ease-in-out infinite alternate;
-  border: 2px solid black;
+  border: 2px solid #000000;
   border-radius: 5px;
 }
 /* button to start game */
@@ -166,7 +166,7 @@ section {
   background-image: url(../images/noisy-texture-200x200-o60-d82-c-000000-t0.png);
   cursor: pointer;
   visibility: hidden;
-  border: 15px solid black;
+  border: 15px solid #000000;
   opacity: 0;
   z-index: 2;
 }
@@ -176,9 +176,9 @@ section {
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 24px;
-  background-color: rgb(171, 169, 115);
+  background-color: #ABA973;
   animation: neon 1.5s ease-in-out infinite alternate;
-  border: 2px solid black;
+  border: 2px solid #000000;
   font-family: "Radio Canada Big", sans-serif;
 }
 /* styles to add to make modals visible */
@@ -192,7 +192,7 @@ section {
 #introduction h1 {
   font-size: 50px;
   margin-top: 0;
-  color: black;
+  color: #000000;
   text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
     1px 1px 0 #b6ff00;
 }
@@ -203,7 +203,7 @@ section {
 #instructions h1 {
   font-size: 35px;
   margin-top: 20px;
-  color: black;
+  color: #000000;
   text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
     1px 1px 0 #b6ff00;
 }
@@ -212,7 +212,7 @@ section {
 #isAWord h1 {
   font-size: 50px;
   animation: createBox 1s;
-  color: black;
+  color: #000000;
   text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
     1px 1px 0 #b6ff00;
 }
@@ -240,7 +240,7 @@ section {
 #notAWord h1 {
   font-size: 50px;
   animation: createBox 1s;
-  color: black;
+  color: #000000;
   text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
     1px 1px 0 #b6ff00;
 }
@@ -285,7 +285,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
-    border: 5px solid black;
+    border: 5px solid #000000;
     border-radius: 10px;
   }
   /* tiles to container letters */
