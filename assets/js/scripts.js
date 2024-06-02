@@ -25,21 +25,27 @@ const tiles = document.querySelectorAll(".tile");
 tiles.forEach((tile) => {
   tile.addEventListener("click", playerGameTileClick);
 });
-// event listener for timer reaching 0
-const timerDisplaySpan = document.getElementById("countDownTimer");
-timerDisplaySpan.addEventListener("DOMSubtreeModified", function () {
-  if (timerDisplaySpan.textContent == "0") {
+
+// event listener for timer reaching 0 changed to mutation observer
+const countDownTimer = document.getElementById("countDownTimer");
+// mutation config to look for changes to countDownTimer
+const config = { childList: true, characterData: true };
+// set up new Mutation observer to watch for zero 
+const watchForZero = new MutationObserver(() => {
+  if (countDownTimer.textContent === "0") {
     PlayerSubmitAnswer();
     resetPlayerAnswer();
     clearInterval(countSecond);
-  //reset timer variable
-  timerSeconds = 30;
-  const tiles = document.querySelectorAll(".tile");
-  tiles.forEach((tile) => {
-    tile.innerHTML = "";
-  });
+    // Reset timer variable
+    timerSeconds = 30;
+    const tiles = document.querySelectorAll(".tile");
+    tiles.forEach((tile) => {
+      tile.innerHTML = "";
+    });
   }
 });
+// Start observing the countDownTimer
+watchForZero.observe(countDownTimer, config);
 
 // event listener for showing modal when page first loads
 document.addEventListener("DOMContentLoaded", function () {
