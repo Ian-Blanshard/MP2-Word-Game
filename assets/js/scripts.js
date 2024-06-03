@@ -33,7 +33,15 @@ const config = { childList: true, characterData: true };
 // set up new Mutation observer to watch for zero 
 const watchForZero = new MutationObserver(() => {
   if (countDownTimer.textContent === "0") {
-    PlayerSubmitAnswer();
+    const modalClass = document.getElementById("timesUp");
+    //add the is-visible CSS rules to make the modal visible
+    modalClass.classList.add("is-visible");
+    //event listener for the close button on modal
+    //assign close button to variable closeModalButton
+    const closeModalButton = modalClass.querySelector("[data-close]");
+    closeModalButton.addEventListener("click", function () {
+      modalClass.classList.remove("is-visible");
+    });
     resetPlayerAnswer();
     clearInterval(countSecond);
     // Reset timer variable

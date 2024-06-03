@@ -17,6 +17,30 @@ h2,
 section {
   color: #b7ff00bc;
 }
+/*--------------------------- 404 page ----------------------------- */
+/* 404 styles*/
+#divFour {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#wrongPlace {
+  text-align: center;
+  font-size: 4rem;
+  margin: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #000000;
+  text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
+    1px 1px 0 #b6ff00;
+}
+#buttonFour {
+  text-decoration: none;
+  color: #000000;
+}
+
 /*--------------------------- game header styles ----------------------------- */
 /* div holding title, highscore and timer */
 #gameTitle {
@@ -74,7 +98,7 @@ section {
   align-items: center;
   width: 6vh;
   height: 9vh;
-  background-color: #ABA973;
+  background-color: #aba973;
   margin: 10px;
   font-size: 50px;
   border: 2px solid #000000;
@@ -131,7 +155,7 @@ section {
 /* h2 which act as buttons */
 #gameButtons h2 {
   margin: 2%;
-  background-color: #ABA973;
+  background-color: #aba973;
   color: #000000;
   animation: neon 1.5s ease-in-out infinite alternate;
   border: 2px solid #000000;
@@ -170,13 +194,14 @@ section {
   opacity: 0;
   z-index: 2;
 }
-.modal button {
+.modal button,
+#buttonFour {
   margin-top: 5px;
   margin-bottom: 5px;
   padding: 5px 10px;
   border-radius: 10px;
   font-size: 24px;
-  background-color: #ABA973;
+  background-color: #aba973;
   animation: neon 1.5s ease-in-out infinite alternate;
   border: 2px solid #000000;
   font-family: "Radio Canada Big", sans-serif;
@@ -253,10 +278,12 @@ section {
 }
 
 /*------------------- too short word instruction modal styles -------------------- */
-#tooShortWord {
+#tooShortWord,
+#timesUp {
   font-size: 35px;
 }
-#tooShortWord div {
+#tooShortWord div,
+#timesUp div {
   font-size: 35px;
   margin-bottom: 40px;
 }
