@@ -168,7 +168,7 @@ The scoreboard holds two pieces of information which are updated as the player i
 
 ### Correct word modals <a name="correct-word-modals"></a>
 
-The correct word modals are displayed after the player successfully submits a word during the game, a variety of modals exist, each displaying the word they entered and the score it received, this is calculated by the length of the word and the time in which it took them to create it. When the player scores a different rating of stars are achieved, the higher the score the more stars. This star rating enhances the replayability as players strive to achieve a higher rating.
+The correct word modals are displayed after the player successfully submits a word during the game, a variety of modals exist, each displaying the word they entered and the score it received, this is calculated by the length of the word and the time in which it took them to create it. When the player scores a different rating of stars are achieved, the higher the score the more stars. This star rating enhances the replayability as players strive to achieve a higher rating. Whether the word is valid is handled by using [this dictionary API](https://dictionaryapi.dev/) to check it exists in the English language
 The modal contains a let's play again button to the allow the player to close the modal and play another game. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
 
 One star modal
@@ -232,6 +232,8 @@ For learning how to animate shadows i used [this site](https://css-tricks.com/ge
 The large black background had some visual noise texture added to it to break up the large block of colour, this was created using [noise texture generator](https://www.noisetexturegenerator.com/)
 
 When I discovered the DOMSubtreeModified event listener need to be replaced I used [this site](https://developer.chrome.com/blog/mutation-events-deprecation/) and [this site](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver) to learn about mutation events.
+
+To validate whether a word in the English language I used a free [dictionary API available here](https://dictionaryapi.dev/)
 
 ***
 
@@ -429,6 +431,10 @@ This is achieved by:
 Detailed instructions on how to create a site on GitHub pages can be found [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
 
 ## Finished site  <a name="finished-site"></a>
+
+![Screenshot of finshed game](/assets/images/finished-game.jpg)
+![Screenshot of finshed game](/assets/images/finished-game1.jpg)
+![Screenshot of finshed game](/assets/images/finished-game2.jpg)
 
 
 
