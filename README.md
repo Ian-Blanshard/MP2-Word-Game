@@ -156,7 +156,7 @@ The game buttons are the two buttons which can be clicked by the player to contr
 
 ### Game title <a name="game-title"></a>
 
-The game title is at the head of the pages and shows the logo for the game, it is there as a visual reminder to the player of the game what game they are playing.
+The game title is at the head of the pages and shows the logo for the game, it is there as a visual reminder to the player of the game what game they are playing. It also can be clicked to open the introduction/instructions modal again.
 
 ![Screenshot of game title](/assets/images/game-title.jpg)
 
@@ -337,6 +337,7 @@ Feature | Outcome | Pass/Fail
  --- | --- | ---
 Modal displays | Modal should display upon new page loading | Pass
 Modal closes | Modal should close and display the game screen when the player clicks the I'm ready to play button | Pass
+Modal opens | Modal should reopen when the game title is clicked | Pass
 Title | Title should be visible and legible | Pass
 Introduction | Introduction should be visible and legible | Pass
 Instruction Title | Instruction title should be visible and legible | Pass

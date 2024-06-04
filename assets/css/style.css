@@ -394,6 +394,13 @@ section {
   }
 }
 
+@media (min-width: 950px) {
+  #introduction,
+  #gameInstructions {
+    font-size: 25px;
+  }
+}
+
 /*------------------ animations -------------------- */
 
 @keyframes neon {
