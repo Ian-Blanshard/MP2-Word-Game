@@ -194,8 +194,7 @@ The not a word modal appears when the player enters a word which is not in the e
 The word too short modal appears when a player enters a word which is less than three letters wrong, this is against the rules of the game, this information is communicated to them. The modal contains a keep playing button which allows them to return to the game. This button has the same animation as the other player interactive objects, ensuring they know it is clickable.
 
 ![Screenshot of word too short modal](/assets/images/word-too-short-modal.jpg)
-### title of feature <a name=""></a>
-![]()
+
 
 ***
 
