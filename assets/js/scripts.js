@@ -146,8 +146,6 @@ function PlayerSubmitAnswer() {
   if (playersWord.length > 2) {
     //join the playersWord answer array into a single string
     let wordToCheck = playersWord.join("");
-    //log to console !!!!! remove in final build !!!!!
-    console.log(wordToCheck);
     //cancel the timer
     clearInterval(countSecond);
     //calculate the player score
@@ -365,8 +363,6 @@ function addLettersToTiles() {
 function calculatePlayerScore() {
   //multiply the length of the word by the remaining seconds
   playerScore = playersWord.length * timerSeconds;
-  //log to console !!!!! remove in final build !!!!!
-  console.log(playerScore);
 }
 
 /** function to update highscore if new player score is highest yet */
