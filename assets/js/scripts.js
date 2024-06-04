@@ -88,6 +88,8 @@ function resetGameScreen() {
   tiles.forEach((tile) => {
     tile.innerHTML = "";
   });
+  // add eventlistener to start button
+  startButton.addEventListener("click", startNewGame);
   //clear player tiles from screen
   resetPlayerAnswer();
   //set timer back to 30s
@@ -135,8 +137,6 @@ function resetPlayerAnswer() {
 function playerGameTileClick() {
   //add the letter from the clicked tile to the playersWord array
   playersWord.push(this.innerHTML);
-  //log to console !!!!! remove in final build !!!!!
-  console.log(playersWord);
   //create tiles for all current letters in playersWord array
   updateAnswerTiles();
 }
@@ -264,21 +264,23 @@ function updateAnswerTiles() {
 function startNewGameTimer() {
   // assign the span to hold the timer to the variable timerDisplaySpan
   let timerDisplaySpan = document.getElementById("countDownTimer");
-  //clear any existing timers
+  // clear any existing timers
   clearInterval(countSecond);
-  //reset timer variable
+  // reset timer variable
   timerSeconds = 30;
-  //set timer display to timerSeconds
+  // remove eventlistener from start button to stop new game being started
+  startButton.removeEventListener("click", startNewGame);
+  // set timer display to timerSeconds
   timerDisplaySpan.textContent = timerSeconds;
-  //use setInterval timer running a function to -1 from timerSeconds every sec
+  // use setInterval timer running a function to -1 from timerSeconds every sec
   countSecond = setInterval(() => {
-    //minus 1 from timerSeconds
+    // minus 1 from timerSeconds
     timerSeconds--;
-    //update timer span
+    // update timer span
     timerDisplaySpan.textContent = timerSeconds;
-    //respond once timer reaches 0
+    // respond once timer reaches 0
     if (timerSeconds <= 0) {
-      //action when timer reaches 0
+      // action when timer reaches 0
       clearInterval(countSecond);
     }
   }, 1000);
