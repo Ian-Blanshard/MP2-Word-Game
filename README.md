@@ -303,7 +303,7 @@ SEO scored poorly due to no meta description.
 
 a meta description was added to my HTML this improved this issue.
 
-![Screenshot of lighthouse testing after](/assets/images/lighthouse-SEO-fixed.jpg)
+![Screenshot of lighthouse testing after](/assets/images/lighthouse-seo-fixed.jpg)
 
 Best practices scored poorly due to using DOMsubtreemodified in an event listener.
 
