@@ -11,6 +11,21 @@ let playerScore;
 
 // event listeners
 
+// event listener for game title to relaunch instructions on click
+const gameTitle = document.getElementById('gameTitle');
+gameTitle.addEventListener("click",function () {
+  // assign the gameInstructions div to modalClass variable
+  const modalClass = document.getElementById("gameInstructions");
+  // add the is-visible CSS rules to make the modal visible
+  modalClass.classList.add("is-visible");
+  // event listener for the close button on modal
+  // assign close button to variable closeModalButton
+  const closeModalButton = modalClass.querySelector("[data-close]");
+  closeModalButton.addEventListener("click", function () {
+    modalClass.classList.remove("is-visible");
+  });
+});
+
 // event listener for start game button
 const startButton = document.getElementById("startGame");
 startButton.addEventListener("click", startNewGame);
@@ -205,12 +220,12 @@ function showCorrectWordModal(data) {
                                     <br>`;
   }
 
-  //assign the isAWord div to modalClass variable
+  // assign the isAWord div to modalClass variable
   const modalClass = document.getElementById("isAWord");
   //add the is-visible CSS rules to make the modal visible
   modalClass.classList.add("is-visible");
-  //event listener for the close button on modal
-  //assign close button to variable closeModalButton
+  // event listener for the close button on modal
+  // assign close button to variable closeModalButton
   const closeModalButton = modalClass.querySelector("[data-close]");
   closeModalButton.addEventListener("click", function () {
     modalClass.classList.remove("is-visible");
