@@ -211,10 +211,13 @@ section {
   visibility: visible;
   opacity: 1;
 }
+.modal h3 {
+  display: none;
+}
 /*-------------------- game instruction modal styles ------------------------- */
 
 /* styles for the game title */
-#introduction h1 {
+#introduction h2 {
   font-size: 50px;
   margin-top: 0;
   color: #000000;
@@ -226,13 +229,14 @@ section {
   padding: 10px;
   list-style-type: none;
 }
-#instructions h1 {
+#instructions h2 {
   font-size: 35px;
   margin-top: 20px;
   color: #000000;
   text-shadow: -1px -1px 0 #b6ff00, 1px -1px 0 #b6ff00, -1px 1px 0 #b6ff00,
     1px 1px 0 #b6ff00;
 }
+
 /*-------------------- is a word modal styles -------------------------------- */
 
 #isAWord h1 {

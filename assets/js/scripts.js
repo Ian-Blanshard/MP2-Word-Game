@@ -11,7 +11,7 @@ let playerScore;
 
 // event listeners
 
-// event listener for game title to relaunch instructions on click
+// event listener for game title to relaunch instructions when clicked
 const gameTitle = document.getElementById('gameTitle');
 gameTitle.addEventListener("click",function () {
   // assign the gameInstructions div to modalClass variable

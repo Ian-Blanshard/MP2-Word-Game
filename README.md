@@ -318,6 +318,8 @@ This lead me to having to remove the old eventlistener containing DOMSubtreeModi
 
 ### Manual testing <a name="manual-testing"></a>
 
+I chose to perform manual testing for this project as its size was small. This allowed me to quickly add features and restructure existing features as I went without having to also construct tests. The complexity of the game meant I could still quickly test all the features myself. It also allowed me to spend time experiencing the layout and design and how this worked together. I have learnt to use Jest to perform automated testing and can see the value in using this in larger projects, which would have greater functionality, where it would be more time efficient to use automated testing to ensure it all worked. It would also be advantageous in projects which are likely to undergo many changes throughout their lifespan and it would be essential to check than new additions did not break previous functionality. Below is the manual testing I performed.
+
 #### Testing across different devices and browsers  <a name="testing-devices-browsers"></a>
 
 Browser | Outcome | Pass/Fail  
